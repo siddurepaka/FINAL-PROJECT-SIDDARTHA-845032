@@ -1,0 +1,103 @@
+<div class="bg">
+    <div class="container contact">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="contact-info">
+                    <img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image"/>
+                    <h2>Add a Product</h2>
+                    <h4>We would love to hear from you !</h4>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="contact-form">
+                    <form [formGroup]="addform" (ngSubmit)="OnSubmit()">
+                        <div class=form group>
+                            <label class="control-label col-sm-2">ID:</label>
+                            <input type="text" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id.errors }" />
+                            <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
+                                <div *ngIf="f.id.errors.required">ID is required</div>
+                                <div *ngIf="f.id.pattern">Enter ID</div>
+                            </div>                        
+                        </div>
+
+                        <div class=form group>
+                            <label class="control-label col-sm-2">Category ID:</label>
+                            <input type="text" formControlName="cid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cid.errors }" />
+                            <div *ngIf="submitted && f.cid.errors" class="invalid-feedback">
+                                <div *ngIf="f.cid.errors.required">Category is required</div>
+                                <!-- <div *ngIf="f.cid.pattern">Enter Category</div> -->
+                            </div> 
+
+                        </div>
+                        <div class=form group>
+                            <label class="control-label col-sm-2">Sub Category:</label>
+                            <input type="text" formControlName="scid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.scid.errors }" />
+                            <div *ngIf="submitted && f.scid.errors" class="invalid-feedback">
+                                <div *ngIf="f.scid.errors.required">Sub Category is required</div>
+                                <!-- <div *ngIf="f.scid.pattern">Enter Sub Category</div> -->
+                            </div> 
+
+                        </div>
+                        <div class=form group>
+                            <label class="control-label col-sm-2">Price:</label>
+                            <input type="text" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                            <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                                <div *ngIf="f.price.errors.required">Price is required</div>
+                                <!-- <div *ngIf="f.price.pattern">Enter Price</div> -->
+                            </div> 
+
+                        </div>
+                        <div class=form group>
+                            <label class="control-label col-sm-2">Item name:</label>
+                            <input type="text" formControlName="itemname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.itemname.errors }" />
+                            <div *ngIf="submitted && f.itemname.errors" class="invalid-feedback">
+                                <div *ngIf="f.itemname.errors.required">Item name required</div>
+                                <!-- <div *ngIf="f.itemname.pattern">Enter Item</div> -->
+                            </div> 
+
+                        </div>
+                        <div class=form group>
+                            <label class="control-label col-sm-2">ID:</label>
+                            <input type="text" formControlName="description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                                <div *ngIf="f.description.errors.required">description is required</div>
+                                <!-- <div *ngIf="f.description.pattern">Enter description</div> -->
+                            </div> 
+
+                        </div>
+                        <div class=form group>
+                            <label class="control-label col-sm-2">Stock Number:</label>
+                            <input type="text" formControlName="stocknumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.stocknumber.errors }" />
+                            <div *ngIf="submitted && f.stocknumber.errors" class="invalid-feedback">
+                                <div *ngIf="f.stocknumber.errors.required">Username is required</div>
+                                <!-- <div *ngIf="f.stocknumber.pattern"></div> -->
+                            </div> 
+
+                        </div>
+                        <div class=form group>
+                            <label class="control-label col-sm-2">ID:</label>
+                            <input type="text" formControlName="remarks" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.remarks.errors }" />
+                            <div *ngIf="submitted && f.remarks.errors" class="invalid-feedback">
+                                <div *ngIf="f.remarks.errors.required">Remarks is required</div>
+                                <!-- <div *ngIf="f.remarks.pattern">Enter Remarks</div> -->
+                            </div> 
+
+                        </div>
+
+                        <div class="form-group">        
+                            <div class="col-sm-offset-2 col-sm-10">
+                              <button type="submit" class="btn btn-default">Add items</button>
+                            </div>
+                          </div>
+                        
+                   
+                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
+
+
+    
