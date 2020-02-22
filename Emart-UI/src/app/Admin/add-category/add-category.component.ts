@@ -14,9 +14,6 @@ export class AddCategoryComponent implements OnInit {
   constructor(private formbuilder:FormBuilder) { }
 
   ngOnInit() {
-    category_id:number;
-    category_name:string;
-    brief_details:string;
     
   }
 
