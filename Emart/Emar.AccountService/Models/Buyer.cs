@@ -14,7 +14,7 @@ namespace Emar.AccountService.Models
         public string Username { get; set; }
         public string Password { get; set; }
         public string Emailid { get; set; }
-        public int MobileNumber { get; set; }
+        public string MobileNumber { get; set; }
         public DateTime? Createdatetime { get; set; }
 
         public virtual ICollection<PurchaseHistory> PurchaseHistory { get; set; }

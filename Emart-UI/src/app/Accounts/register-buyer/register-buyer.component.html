@@ -1,76 +1,79 @@
-<div class="card m-3">
-    <h5 class="card-header">Registration Form</h5>
-    <div class="card-body">
-        <form [formGroup]="registerForm" (ngSubmit)="OnSubmit()">
-            <div class="form-row">
-                <div class="form-group col-5">
-                    <label>ID</label>
-                    <input type="text" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id.errors }" />
-                    <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
-                        <div *ngIf="f.id.errors.required">ID is required</div>
-                        <div *ngIf="f.id.errors.pattern">Enter your 4 digit Id followed by E</div>
-                    </div>
+<div class="bg">
+    <div class="container contact">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="contact-info">
+                    <img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image"/>
+                    <h2>Sign in As a Seller</h2>
+                    <h4>We would love to hear from you !</h4>
                 </div>
-                <div class="form-group col-5">
-                    <label>UserName</label>
-                    <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
-                    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-                        <div *ngIf="f.username.errors.required">Username is required</div>
-                        <div *ngIf="f.username.errors.pattern">Enter Username</div>
-                    </div>
-                </div>
-                <div class="form-group col-5">
-                    <label>Password</label>
-                    <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                        <div *ngIf="f.password.errors.required">Password is required</div>
-                        <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters and Alphanumeric</div>
-                    </div>
-                </div>
-                <div class="form-group col-5">
-                    <label>Date of Birth</label>
-                    <input type="date" formControlName="createdatetime" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.createdatetime.errors }" />
-                    <div *ngIf="submitted && f.createdatetime.errors" class="invalid-feedback">
-                        <div *ngIf="f.createdatetime.errors.required">Date of joining is required</div>
-                    </div>
-                </div>
-                 <div class="form-group col-5">
-                     
-                    <label>Email</label>
-                    <input type="text" formControlName="emailid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.emailid.errors }" />
-                    <div *ngIf="submitted && f.emailid.errors" class="invalid-feedback">
-                        <div *ngIf="f.emailid.errors.required">Email is required</div>
-                        <div *ngIf="f.emailid.errors.email">Email must be a valid email address</div>
-                    </div>
-                 </div>
-                 <div class="form-group col-5">
-                    <label>Mobile</label>
-                    <!-- <input type="text" size="2" value="+91" readonly="readonly"> -->
-                    <input type="text" formControlName="mobile" maxlength="10" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" />
-                    <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
-                        <div *ngIf="f.mobile.errors.required">Mobile no is required</div>
-                        <div *ngIf="f.mobile.errors.pattern">Mobile no Must be Valid</div>
-                    </div>
-
-
-
-                 </div>
-
-
-
-
-                 
             </div>
-            <div class="form-row">  
-                <div class="text-center">
-                   <button class="btn btn-primary mr-1" type="submit">Register</button>
-                   <!-- <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button> -->
-                </div>
-                </div>
-                
+            <div class="col-md-9">
+                <div class="contact-form">
+                    <form [formGroup]="registerForm" (ngSubmit)="OnSubmit()">
+                        <div class=form group>
+                            <label class="control-label col-sm-2">User ID:</label>
+                            <input type="text" formControlName="id" class="form-control" [ngClass]="{'is-invalid': submitted && f.id.errors }" />
+                            <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
+                                <div *ngIf="f.id.errors.required">User ID is Required</div>
+                                <div *ngIf="f.id.errors.pattern">Enter User ID</div>
+                            </div>
+                        
+                        </div>
 
-                 
-        
-        </form>
-    </div>
-</div>
+                        <div class=form group>
+                            <label class="control-label col-sm-2">UserName:</label>
+                            <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                                <div *ngIf="f.username.errors.required">Username is required</div>
+                                <div *ngIf="f.username.errors.pattern">Enter Username</div>
+                            </div>
+                        
+                        </div>
+
+                        <div class = form group>
+                            <label class="control-label col-sm-2">Password:</label>
+                            <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                <div *ngIf="f.password.errors.required">Password is required</div>
+                                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters and Alphanumeric</div>
+                            </div>
+                        </div>
+                
+                        <div class = form group>
+                            <label class="control-label col-sm-2">Mobile:</label>
+                            <input type="text" formControlName="mobile" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" />
+                            <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+                                <div *ngIf="f.mobile.errors.required">Mobile Number is required</div>
+                                <div *ngIf="f.mobile.errors.pattern">Enter a valid mobile number</div>
+                            </div>
+                        </div>
+                <div class = form group>
+                            <label class="control-label col-sm-2">Date of Birth:</label>
+                            <input type="date" formControlName="date" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.date.errors }" />
+                            <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+                                <div *ngIf="f.date.errors.required">Date of Birth is required</div>
+                                <!-- <div *ngIf="f.date.errors.minlength">Enter a valid date</div> -->
+                            </div>
+                        </div>
+                
+               <div class="form-group">        
+                            <div class="col-sm-offset-2 col-sm-10">
+                              <button type="submit" class="btn btn-default">Submit</button>
+                            </div>
+                          </div>
+            
+    
+    
+    
+      
+                     </form>
+                 </div>
+             </div>
+         </div>
+       </div>
+     </div>	
+    
+                
+    
+    

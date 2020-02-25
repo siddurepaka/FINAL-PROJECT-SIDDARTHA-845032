@@ -37,11 +37,11 @@ namespace Emar.AccountService.Models
             modelBuilder.Entity<Buyer>(entity =>
             {
                 entity.HasIndex(e => e.Emailid)
-                    .HasName("UQ__Buyer__8734520B93BC7D8F")
+                    .HasName("UQ__Buyer__8734520B44B0F011")
                     .IsUnique();
 
                 entity.HasIndex(e => e.MobileNumber)
-                    .HasName("UQ__Buyer__A81EEE8DD0DF4070")
+                    .HasName("UQ__Buyer__A81EEE8DB36A30B4")
                     .IsUnique();
 
                 entity.Property(e => e.Id)
@@ -59,7 +59,11 @@ namespace Emar.AccountService.Models
                     .HasMaxLength(20)
                     .IsUnicode(false);
 
-                entity.Property(e => e.MobileNumber).HasColumnName("mobileNumber");
+                entity.Property(e => e.MobileNumber)
+                    .IsRequired()
+                    .HasColumnName("mobileNumber")
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Password)
                     .IsRequired()
@@ -159,6 +163,11 @@ namespace Emar.AccountService.Models
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
+                entity.Property(e => e.Sellerid)
+                    .HasColumnName("sellerid")
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.StockNumber).HasColumnName("stock_number");
 
                 entity.Property(e => e.SubCategoryId)
@@ -170,6 +179,11 @@ namespace Emar.AccountService.Models
                     .WithMany(p => p.Items)
                     .HasForeignKey(d => d.CategoryId)
                     .HasConstraintName("FK__items__category___1DE57479");
+
+                entity.HasOne(d => d.Seller)
+                    .WithMany(p => p.Items)
+                    .HasForeignKey(d => d.Sellerid)
+                    .HasConstraintName("FK__items__sellerid__1FCDBCEB");
 
                 entity.HasOne(d => d.SubCategory)
                     .WithMany(p => p.Items)
@@ -217,31 +231,31 @@ namespace Emar.AccountService.Models
                 entity.HasOne(d => d.Buyer)
                     .WithMany(p => p.PurchaseHistory)
                     .HasForeignKey(d => d.BuyerId)
-                    .HasConstraintName("FK__PurchaseH__Buyer__21B6055D");
+                    .HasConstraintName("FK__PurchaseH__Buyer__22AA2996");
 
                 entity.HasOne(d => d.Item)
                     .WithMany(p => p.PurchaseHistory)
                     .HasForeignKey(d => d.ItemId)
-                    .HasConstraintName("FK__PurchaseH__Item___239E4DCF");
+                    .HasConstraintName("FK__PurchaseH__Item___24927208");
 
                 entity.HasOne(d => d.Seller)
                     .WithMany(p => p.PurchaseHistory)
                     .HasForeignKey(d => d.SellerId)
-                    .HasConstraintName("FK__PurchaseH__Selle__22AA2996");
+                    .HasConstraintName("FK__PurchaseH__Selle__239E4DCF");
             });
 
             modelBuilder.Entity<Seller>(entity =>
             {
                 entity.HasIndex(e => e.ContactNumber)
-                    .HasName("UQ__Seller__570665C6F700A26F")
+                    .HasName("UQ__Seller__570665C620747988")
                     .IsUnique();
 
                 entity.HasIndex(e => e.Emailid)
-                    .HasName("UQ__Seller__8734520B479A4C81")
+                    .HasName("UQ__Seller__8734520B52D89F27")
                     .IsUnique();
 
                 entity.HasIndex(e => e.Gstin)
-                    .HasName("UQ__Seller__D7AED076636EEA8A")
+                    .HasName("UQ__Seller__D7AED0769BF2F39E")
                     .IsUnique();
 
                 entity.Property(e => e.Id)
@@ -256,6 +270,11 @@ namespace Emar.AccountService.Models
                 entity.Property(e => e.CompanyName)
                     .IsRequired()
                     .HasColumnName("companyName")
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ContactNumber)
+                    .IsRequired()
                     .HasMaxLength(20)
                     .IsUnicode(false);
 

@@ -22,6 +22,7 @@ import { LoginComponent } from './Accounts/login/login.component';
 import { RegisterSellerComponent } from './Accounts/register-seller/register-seller.component';
 import { RegisterBuyerComponent } from './Accounts/register-buyer/register-buyer.component';
 import { HomeComponent } from './Accounts/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { HomeComponent } from './Accounts/home/home.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

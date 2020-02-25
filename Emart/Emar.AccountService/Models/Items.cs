@@ -13,6 +13,7 @@ namespace Emar.AccountService.Models
         public string Id { get; set; }
         public string CategoryId { get; set; }
         public string SubCategoryId { get; set; }
+        public string Sellerid { get; set; }
         public int Price { get; set; }
         public string ItemName { get; set; }
         public string ItemDescription { get; set; }
@@ -20,6 +21,7 @@ namespace Emar.AccountService.Models
         public string Remarks { get; set; }
 
         public virtual Category Category { get; set; }
+        public virtual Seller Seller { get; set; }
         public virtual SubCategory SubCategory { get; set; }
         public virtual ICollection<PurchaseHistory> PurchaseHistory { get; set; }
     }
