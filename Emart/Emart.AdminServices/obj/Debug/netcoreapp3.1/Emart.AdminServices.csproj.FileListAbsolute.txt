@@ -2,7 +2,6 @@ D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emart.AdminServices\bin\Debug\netcoreapp
 D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emart.AdminServices\bin\Debug\netcoreapp3.1\appsettings.json
 D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emart.AdminServices\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emart.AdminServices\bin\Debug\netcoreapp3.1\Emart.AdminServices.exe
-D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emart.AdminServices\obj\Debug\netcoreapp3.1\Emart.AdminServices.csprojAssemblyReference.cache
 D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emart.AdminServices\obj\Debug\netcoreapp3.1\staticwebassets\Emart.AdminServices.StaticWebAssets.Manifest.cache
 D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emart.AdminServices\obj\Debug\netcoreapp3.1\staticwebassets\Emart.AdminServices.StaticWebAssets.xml
 D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emart.AdminServices\obj\Debug\netcoreapp3.1\Emart.AdminServices.AssemblyInfoInputs.cache
@@ -121,3 +120,4 @@ D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emart.AdminServices\bin\Debug\netcoreapp
 D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emart.AdminServices\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emart.AdminServices\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emart.AdminServices\obj\Debug\netcoreapp3.1\Emart.AdminServices.MvcApplicationPartsAssemblyInfo.cache
+D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emart.AdminServices\obj\Debug\netcoreapp3.1\Emart.AdminServices.csprojAssemblyReference.cache

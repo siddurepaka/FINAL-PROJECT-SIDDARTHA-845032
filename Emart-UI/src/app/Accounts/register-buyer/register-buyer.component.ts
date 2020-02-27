@@ -18,19 +18,19 @@ export class RegisterBuyerComponent implements OnInit {
   username:string;
   password:string;
   emailid:string;
-  mobile:number;
+  mobileNumber:number;
   createdatetime:Date;
 
   constructor(private formBuilder:FormBuilder,private service:AccountService) { }
 
   ngOnInit() {
     this.registerForm=this.formBuilder.group({
-      id:['',[Validators.required,Validators.pattern("^[1-9]{4}$")]],
-      username:['',[Validators.required,Validators.pattern("^[A-Za-z0-9]{8}$")]],
-      password:['',[Validators.required,Validators.pattern("^[A-Za-z0-~`!@#$%^&*-_+=]{6,14}$")]],
-      emailid:['',[Validators.required,Validators.email]],
-      mobile:['',[Validators.required,Validators.pattern("^[6-9][0-9]{9}$")]],
-      date:['',Validators.required]
+      id:['1234',[Validators.required,Validators.pattern("^[1-9]{4}$")]],
+      username:['asedfrtg',[Validators.required,Validators.pattern("^[A-Za-z0-9]{8}$")]],
+      password:['123456',[Validators.required,Validators.pattern("^[A-Za-z0-~`!@#$%^&*-_+=]{6,14}$")]],
+      emailid:['abc@as.com',[Validators.required,Validators.email]],
+      mobileNumber:['9875641254',[Validators.required,Validators.pattern("^[6-9][0-9]{9}$")]],
+      createdatetime:['',Validators.required]
 
     });
   }
@@ -45,9 +45,9 @@ export class RegisterBuyerComponent implements OnInit {
       this.buyer.id=this.registerForm.value["id"];
       this.buyer.username=this.registerForm.value["username"];
       this.buyer.password=this.registerForm.value["password"];
-      this.buyer.mobile=this.registerForm.value["mobile"];
+      this.buyer.mobileNumber=this.registerForm.value["mobileNumber"];
       this.buyer.emailid=this.registerForm.value["emailid"]
-      this.buyer.createdatetime=this.registerForm.value["date"];
+      this.buyer.createdatetime=this.registerForm.value["createdatetime"];
       console.log(this.buyer); 
       this.service.RegisterBuyer(this.buyer).subscribe(res=>{
         alert('Registration Successfull');

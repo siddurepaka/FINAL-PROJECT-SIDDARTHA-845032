@@ -29,6 +29,13 @@ namespace Emat.SellerService
             services.AddDbContext<EmartDBContext>();
             services.AddTransient<ISellerRepository, SellerRepository>();
             services.AddTransient<ISellerItemRepository, SellerItemRepository>();
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin()
+                 .AllowAnyMethod()
+                 .AllowAnyHeader());
+            });
+
 
             services.AddControllers();
         }
@@ -49,6 +56,7 @@ namespace Emat.SellerService
             {
                 endpoints.MapControllers();
             });
+            app.UseCors("AllowOrigin");
         }
     }
 }

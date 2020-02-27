@@ -10,7 +10,7 @@
             </div>
             <div class="col-md-9">
                 <div class="contact-form">
-                    <form [formGroup]="addform" (ngSubmit)="OnSubmit()">
+                    <form [formGroup]="additemform" (ngSubmit)="OnSubmit()">
                         <div class=form group>
                             <label class="control-label col-sm-2">ID:</label>
                             <input type="text" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id.errors }" />
@@ -57,7 +57,7 @@
 
                         </div>
                         <div class=form group>
-                            <label class="control-label col-sm-2">ID:</label>
+                            <label class="control-label col-sm-2">Description:</label>
                             <input type="text" formControlName="description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
                             <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
                                 <div *ngIf="f.description.errors.required">description is required</div>
@@ -75,7 +75,7 @@
 
                         </div>
                         <div class=form group>
-                            <label class="control-label col-sm-2">ID:</label>
+                            <label class="control-label col-sm-2">Remarks:</label>
                             <input type="text" formControlName="remarks" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.remarks.errors }" />
                             <div *ngIf="submitted && f.remarks.errors" class="invalid-feedback">
                                 <div *ngIf="f.remarks.errors.required">Remarks is required</div>
@@ -86,9 +86,23 @@
 
                         <div class="form-group">        
                             <div class="col-sm-offset-2 col-sm-10">
-                              <button type="submit" class="btn btn-default">Add items</button>
+                              <button type="submit" class="btn btn-default">Add item</button>
                             </div>
                           </div>
+                          
+                          <!-- <div class="form-group">        
+                            <div class="col-sm-offset-2 col-sm-10">
+                              <button type="submit" class="btn btn-default">Search Item</button>
+                            </div>
+                          </div>
+
+                          <div class="form-group">        
+                            <div class="col-sm-offset-2 col-sm-10">
+                              <button type="submit" class="btn btn-default"></button>
+                            </div>
+                          </div>
+                         -->
+                        
                         
                    
                      </form>

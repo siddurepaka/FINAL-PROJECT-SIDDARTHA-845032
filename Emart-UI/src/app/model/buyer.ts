@@ -3,6 +3,6 @@ export class Buyer {
     username:string;
     password:string;
     emailid:string;
-    mobile:number;
+    mobileNumber:number;
     createdatetime:Date;
 }

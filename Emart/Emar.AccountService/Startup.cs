@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Emar.AccountService.Models;
 using Emar.AccountService.Repositories;
+using Microsoft.AspNetCore.Cors;
 
 namespace Emar.AccountService
 {
@@ -26,7 +27,7 @@ namespace Emar.AccountService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            
             services.AddDbContext<EmartDBContext>();
             services.AddTransient<IaccountRepository, accountRepository>();
             services.AddCors(c =>
@@ -35,6 +36,9 @@ namespace Emar.AccountService
                  .AllowAnyMethod()
                  .AllowAnyHeader());
             });
+
+
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,10 +55,13 @@ namespace Emar.AccountService
             app.UseCors("AllowOrigin");
 
 
+
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+           
         }
     }
 }

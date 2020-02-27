@@ -10,7 +10,7 @@ const Requestheaders={headers:new HttpHeaders({
   providedIn: 'root'
 })
 export class AccountService {
-  url:string='http://localhost:56319/Account/'
+  url:string='http://localhost:57323/Account/'
   constructor(private http:HttpClient) { }
   public RegisterBuyer(buyer:Buyer):Observable<any>
   {
