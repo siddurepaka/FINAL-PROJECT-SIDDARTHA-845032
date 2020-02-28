@@ -15,7 +15,7 @@ export class SellerService {
   url:string='http://localhost:57323/';
 
   constructor(private http:HttpClient) { }
-  public AddItems(items:Items):Observable<any>
+  public Additems(items:Items):Observable<any>
   {
     return this.http.post(this.url+'Item/AddItems',items,Requestheaders);
   }

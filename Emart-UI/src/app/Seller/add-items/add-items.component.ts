@@ -25,13 +25,13 @@ export class AddItemsComponent implements OnInit {
   ngOnInit() {
     this.additemform=this.formbuilder.group({
     id:['',Validators.required],
-    cid:['',Validators.required],
-    scid:['',Validators.required],
+    categoryId:['',Validators.required],
+    subCategoryId:['',Validators.required],
     sellerid:['',Validators.required],
     price:['',Validators.required],
-    itemname:['',Validators.required],
-    description:['',Validators.required],
-    stocknumber:['',Validators.required],
+    itemName:['',Validators.required],
+    itemDescription:['',Validators.required],
+    stockNumber:['',Validators.required],
     remarks:['',Validators.required],
     });
   }
@@ -42,16 +42,16 @@ export class AddItemsComponent implements OnInit {
     {
       alert('Success!!\n\n')
       this.item.id=this.additemform.value['id'],
-      this.item.categoryid=this.additemform.value['cid'],
-    this.item.subcategoryid=this.additemform.value['scid'],
+      this.item.categoryId=this.additemform.value['categoryId'],
+    this.item.subCategoryId=this.additemform.value['subCategoryId'],
     this.item.sellerid=this.additemform.value['sellerid'],
-    this.item.price=this.additemform.value['price'],
-    this.item.itemname=this.additemform.value['itemname'],
-    this.item.description=this.additemform.value['description'],
-    this.item.stocknumber=this.additemform.value['stocknumber'],
+    this.item.price=Number(this.additemform.value['price']),
+    this.item.itemName=this.additemform.value['itemName'],
+    this.item.itemDescription=this.additemform.value['itemDescription'],
+    this.item.stockNumber=Number(this.additemform.value['stockNumber']),
     this.item.remarks=this.additemform.value['remarks']
     console.log(this.item); 
-    this.service.AddItems(this.item).subscribe(res=>{
+    this.service.Additems(this.item).subscribe(res=>{
       alert('Item Added Successfully');
     },err=>{
       console.log(err);
@@ -71,15 +71,15 @@ Search()
   this.service.GetItem(id1).subscribe(res=>{
     this.item=res;
     console.log(this.item);
-    this.additemform.setValue({
+    this.additemform.patchValue({
       id:this.item.id,
-      cid:this.item.categoryid,
-      scid:this.item.subcategoryid,
+      categoryId:this.item.categoryId,
+      subCategoryId:this.item.subCategoryId,
       sellerid:this.item.sellerid,
-      itemname:this.item.itemname,
+      itemName:this.item.itemName,
       price:this.item.price,
-      description:this.item.description,
-      stocknumber:this.item.stocknumber,
+      itemDescription:this.item.itemDescription,
+      stockNumber:this.item.stockNumber,
       remarks:this.item.remarks
     })
   })
@@ -89,13 +89,13 @@ Update()
 {
   this.item=new Items();
   this.item.id=this.additemform.value['id'],
-      this.item.categoryid=this.additemform.value['cid'],
-    this.item.subcategoryid=this.additemform.value['scid'],
+      this.item.categoryId=this.additemform.value['categoryId'],
+    this.item.subCategoryId=this.additemform.value['subCategoryId'],
     this.item.sellerid=this.additemform.value['sellerid'],
     this.item.price=this.additemform.value['price'],
-    this.item.itemname=this.additemform.value['itemname'],
-    this.item.description=this.additemform.value['description'],
-    this.item.stocknumber=this.additemform.value['stocknumber'],
+    this.item.itemName=this.additemform.value['itemName'],
+    this.item.itemDescription=this.additemform.value['itemDescription'],
+    this.item.stockNumber=this.additemform.value['stockNumber'],
     this.item.remarks=this.additemform.value['remarks']
     console.log(this.item);
     this.service.UpdateItems(this.item).subscribe(res=>{
