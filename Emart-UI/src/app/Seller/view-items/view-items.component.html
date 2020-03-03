@@ -1,28 +1,20 @@
 <div class="bg">
     <div class="container contact">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <div class="contact-info">
                     <img src="assets/images/sellerlogo.png" alt="Smiley face" height="60px" width="120px">
                     <h2>View Items</h2>
                     <h4>We would love to hear from you !</h4>
                 </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-10">
                 <div class="contact-form">
                     <form>
-                        <div class=form group>
-                            <label class="control-label col-sm-2">Seller ID:</label>
-                            <input type="text" [(ngModel)]="sellerid" placeholder="Enter Your Seller ID.."/>&nbsp;
-                        
-                        </div>
+                       
 
                        
-                             <div class="form-group">        
-                            <div class="col-sm-offset-2 col-sm-10">
-                              <button type="submit" (click)="ViewItems()" class="btn btn-default">Submit</button>
-                            </div>
-                          </div>
+                            
                           <div class="form-group">
                             <table class="table table-bordered">
                                 <tr style="color: #ff9b00;">
@@ -35,19 +27,25 @@
                                   <th>Description</th>
                                   <th>Stock</th>
                                   <th>Remarks</th>
+                                  <th>Edit</th>
+                                  <th>Delete</th>
                                 </tr>
                                 <tr *ngFor="let item of list" style="color: black;">
                                   <td>{{item.id}}</td>
                                   <td>{{item.categoryId}}</td>
-                                  <td>{{item.subcategoryId}}</td>
+                                  <td>{{item.subCategoryId}}</td>
                                   <td>{{item.sellerid}}</td>
                                   <td>{{item.itemName}}</td>
                                   <td>{{item.price}}</td>
-                                  <td>{{item.Description}}</td>
+                                  <td>{{item.itemDescription}}</td>
                                   <td>{{item.stockNumber}}</td>
                                   <td>{{item.remarks}}</td>
+                                
+                                  <td><button class= "btn btn-default" (click)="Update()">Edit</button></td>
+                                  <td><button class= "btn btn-default" (click)="Delete(item.id)">Delete</button></td>
                                 </tr>
                               </table>
+                              
                            
                               
                           </div>

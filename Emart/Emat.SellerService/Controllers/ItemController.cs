@@ -90,6 +90,32 @@ namespace Emat.SellerService.Controllers
                 return NotFound(ex.InnerException.Message);
             }
         }
+        [HttpGet]
+        [Route("GetAllCategories")]
+        public IActionResult GetAllCategories()
+        {
+            try
+            {
+                return Ok(_repo.GetAllcategories());
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("GetAllSubCategories/{CategoryId}")]
+        public IActionResult GetAllSubCategories(string CategoryId)
+        {
+            try
+            {
+                return Ok(_repo.GetAllSubCategories(CategoryId));
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
 
 
 

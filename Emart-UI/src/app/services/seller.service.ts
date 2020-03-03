@@ -19,6 +19,7 @@ export class SellerService {
   {
     return this.http.post(this.url+'Item/AddItems',items,Requestheaders);
   }
+
   public ViewItems(sellerid:string):Observable<any>
   {
     return this.http.get(this.url+'Item/ViewItems/'+sellerid,Requestheaders);
@@ -38,5 +39,16 @@ export class SellerService {
   public UpdateItems(items:Items):Observable<any>
   {
     return this.http.put<any>(this.url+'Item/UpdateItemsStock',items,Requestheaders);
+  }
+  public GetCategories():Observable<any>
+  {
+    return this.http.get<any>(this.url+'Item/GetAllCategories',Requestheaders);
+  }
+  public GetSubCategories(id:string):Observable<any>
+  {
+    return this.http.get<any>(this.url+'Item/GetAllSubCategories/'+id,Requestheaders);
+  }
+  public DeleteItem(id:string):Observable<Items>{
+    return this.http.delete<Items>(this.url+'Item/Deleteitem/'+id,Requestheaders);
   }
 }

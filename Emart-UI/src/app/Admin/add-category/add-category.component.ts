@@ -21,7 +21,7 @@ export class AddCategoryComponent implements OnInit {
 
   ngOnInit() {
     this.addcform=this.formBuilder.group({
-      category_id:['',Validators.required],
+     // category_id:['',Validators.required],
 category_name:['',Validators.required],
 briefdetails:['',Validators.required],
 });
@@ -33,7 +33,7 @@ OnSubmit()
   if(this.addcform.valid)
   {
     alert('Success!!\n\n')
-    this.addc.categoryid=this.addcform.value['category_id'],
+    this.addc.categoryid='CAT'+Math.round(Math.random()*100);
     this.addc.categoryname=this.addcform.value['category_name'],
     this.addc.briefdetails=this.addcform.value['briefdetails'],
     console.log(this.addc); 

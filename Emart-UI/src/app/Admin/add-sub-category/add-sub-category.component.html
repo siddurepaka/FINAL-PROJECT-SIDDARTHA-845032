@@ -13,7 +13,7 @@
                 <div class="contact-form">
                      <form [formGroup]="subform" (ngSubmit)="OnSubmit()">
                         
-                       <div class=form group>
+                       <!-- <div class=form group>
                             <label class="control-label col-sm-2">Sub Category ID:</label>
                             <input type="text" formControlName="subcategoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.subcategoryid.errors }" />
                             <div *ngIf="submitted && f.subcategoryid.errors" class="invalid-feedback">
@@ -21,10 +21,14 @@
                                 <div *ngIf="f.subcategoryid.errors.pattern">Enter ID</div>
                             </div>
                         </div>
-                        
+                         -->
                         <div class=form group>
-                          <label class="control-label col-sm-2">Category ID:</label>
-                          <input type="text" formControlName="categoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryid.errors }" />
+                          <label class="control-label col-sm-2">Category:</label>
+                          <select formControlName="categoryid" class="form-control">
+                            <option *ngFor="let item of categorylist" value={{item.categoryId}}>{{item.categoryName}}</option>
+                        </select>
+
+                          <!-- <input type="text" formControlName="categoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryid.errors }" /> -->
                           <div *ngIf="submitted && f.categoryid.errors" class="invalid-feedback">
                               <div *ngIf="f.categoryid.errors.required">ID is required</div>
                               <div *ngIf="f.categoryid.errors.pattern">Enter ID</div>

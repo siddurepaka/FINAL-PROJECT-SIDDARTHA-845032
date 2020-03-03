@@ -47,4 +47,12 @@ D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emar.AccountService\bin\Debug\netcoreapp
 D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emar.AccountService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emar.AccountService\obj\Debug\netcoreapp3.1\Emar.AccountService.dll
 D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emar.AccountService\obj\Debug\netcoreapp3.1\Emar.AccountService.pdb
+D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emar.AccountService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emar.AccountService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emar.AccountService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emar.AccountService\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emar.AccountService\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emar.AccountService\obj\Debug\netcoreapp3.1\Emar.AccountService.MvcApplicationPartsAssemblyInfo.cache
+D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emar.AccountService\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emar.AccountService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emar.AccountService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

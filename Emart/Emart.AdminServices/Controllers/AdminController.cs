@@ -75,6 +75,12 @@ namespace Emart.AdminServices.Controllers
                 return NotFound(ex.Message);
             }
         }
+        [HttpGet]
+        [Route("viewcategory")]
+        public IActionResult viewcategory()
+        {
+            return Ok(_repo.viewcategory());
+        }
 
     }
 }

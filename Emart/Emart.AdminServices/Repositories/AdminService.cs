@@ -45,5 +45,10 @@ namespace Emart.AdminServices.Repositories
             _context.SaveChanges();
 
         }
+
+        public List<Category> viewcategory()
+        {
+            return _context.Category.ToList();
+        }
     }
 }

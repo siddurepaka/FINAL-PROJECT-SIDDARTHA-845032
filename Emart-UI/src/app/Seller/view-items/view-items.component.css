@@ -2,7 +2,7 @@
     padding: 4%;
     height: 400px;
 }
-.col-md-3{
+.col-md-2{
     background: #ff9b00;
     padding: 4%;
     border-top-left-radius: 0.5rem;
@@ -17,7 +17,7 @@
 .contact-info h2{
     margin-bottom: 10%;
 }
-.col-md-9{
+.col-md-10{
     background: #fff;
     padding: 3%;
     border-top-right-radius: 0.5rem;
@@ -27,10 +27,10 @@
     font-weight:600;
 }
 .contact-form button{
-    background: #25274d;
+    background: #ff9b00;
     color: #fff;
     font-weight: 600;
-    width: 25%;
+    width: 100%;
 }
 .contact-form button:focus{
     box-shadow:none;

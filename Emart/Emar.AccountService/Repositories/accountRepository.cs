@@ -61,5 +61,6 @@ namespace Emar.AccountService.Repositories
         {
             return _context.Seller.ToList();
         }
-    }
+
+      }
 }

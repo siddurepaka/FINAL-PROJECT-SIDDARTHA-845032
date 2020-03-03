@@ -28,6 +28,17 @@ namespace Emat.SellerService.Repositories
             _context.SaveChanges();
         }
 
+        public List<Category> GetAllcategories()
+        {
+            return _context.Category.ToList();
+        }
+
+        public List<SubCategory> GetAllSubCategories(string cid)
+        {
+            List<SubCategory> subCategories = _context.SubCategory.Where(i => i.CategoryId == cid).ToList();
+            return subCategories;
+        }
+
         public Items GetItems(string sid)
         {
             return _context.Items.Find(sid);

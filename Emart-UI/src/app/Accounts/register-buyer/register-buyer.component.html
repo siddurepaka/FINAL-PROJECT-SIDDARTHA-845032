@@ -11,7 +11,7 @@
             <div class="col-md-9">
                 <div class="contact-form">
                     <form [formGroup]="registerForm" (ngSubmit)="OnSubmit()">
-                        <div class=form group>
+                        <!-- <div class=form group>
                             <label class="control-label col-sm-2">User ID:</label>
                             <input type="text" formControlName="id" class="form-control" [ngClass]="{'is-invalid': submitted && f.id.errors }" />
                             <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
@@ -20,7 +20,7 @@
                             </div>
                         
                         </div>
-
+ -->
                         <div class=form group>
                             <label class="control-label col-sm-2">UserName:</label>
                             <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />

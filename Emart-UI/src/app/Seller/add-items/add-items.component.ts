@@ -4,6 +4,8 @@ import { Items } from 'src/app/model/items';
 import { combineLatest } from 'rxjs';
 import { SellerService } from 'src/app/services/seller.service';
 import { Router } from '@angular/router';
+import { Category } from 'src/app/model/category';
+import { SubCategory } from 'src/app/model/sub-category';
 
 
 @Component({
@@ -15,16 +17,24 @@ export class AddItemsComponent implements OnInit {
   additemform:FormGroup;
   submitted=false;
   item:Items;
+  categorylist:Category[];
+  subcategorylist:SubCategory[];
+  categoryId:string;
   
 
 
   constructor(private formbuilder:FormBuilder,private service:SellerService,private route:Router) {
+    this.service.GetCategories().subscribe(res=>{
+      this.categorylist=res;
+      console.log(this.categorylist);
+    })
+
     this.item=new Items();
   }
 
   ngOnInit() {
     this.additemform=this.formbuilder.group({
-    id:['',Validators.required],
+//id:['',Validators.required],
     categoryId:['',Validators.required],
     subCategoryId:['',Validators.required],
     sellerid:['',Validators.required],
@@ -41,7 +51,7 @@ export class AddItemsComponent implements OnInit {
     if(this.additemform.valid)
     {
       alert('Success!!\n\n')
-      this.item.id=this.additemform.value['id'],
+      this.item.id='I'+Math.round(Math.random()*1000);
       this.item.categoryId=this.additemform.value['categoryId'],
     this.item.subCategoryId=this.additemform.value['subCategoryId'],
     this.item.sellerid=this.additemform.value['sellerid'],
@@ -106,6 +116,15 @@ Update()
     })
   
 }
+GetAllSubCategory()
+  {
+    let categoryId=this.additemform.value["categoryId"];
+    console.log(categoryId);
+    this.service.GetSubCategories(categoryId).subscribe(res=>{
+      this.subcategorylist=res;
+      console.log(this.subcategorylist);
+    })
+  }
 
 }
 

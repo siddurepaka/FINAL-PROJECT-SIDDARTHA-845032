@@ -13,5 +13,7 @@ namespace Emat.SellerService.Repositories
         void DeleteItem(string id);
         void UpdateItem(Items obj);
         Items GetItems(string id);
+        List<Category> GetAllcategories();
+        List<SubCategory> GetAllSubCategories(string cid);
     }
 }

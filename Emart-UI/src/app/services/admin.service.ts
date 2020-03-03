@@ -23,5 +23,10 @@ export class AdminService {
   {
     return this.http.post<any>(this.url+'AddSubCategory',JSON.stringify(item),Requestheaders)
   }
+  public GetAllCategories():Observable<any>
+  {
+    return this.http.get<any>(this.url+'viewcategory',Requestheaders);
+  }
+
 
 }

@@ -22,7 +22,7 @@ export class RegisterSellerComponent implements OnInit {
 
   ngOnInit() {
     this.registerform=this.formBuilder.group({
-      id:['',[Validators.required,Validators.pattern("^[1-9]{4}$")]],
+     // id:['',[Validators.required,Validators.pattern("^[1-9]{4}$")]],
       username:['',[Validators.required,Validators.pattern("^[A-Za-z0-9]{8}$")]],
       password:['',Validators.required],
 companyName:['',Validators.required],
@@ -42,7 +42,7 @@ ContactNumber:['',[Validators.required,Validators.pattern("^[6-9][0-9]{9}$")]]
     if(this.registerform.valid)
     {
       alert('Success!!\n\n')
-      this.seller.id=this.registerform.value["id"],
+      this.seller.id='EMARTSEL'+Math.round(Math.random()*100);
       this.seller.username=this.registerform.value["username"],
       this.seller.password=this.registerform.value["password"],
       this.seller.emailid=this.registerform.value["emailid"],

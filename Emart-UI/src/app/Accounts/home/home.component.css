@@ -3,7 +3,7 @@
 
 
 .a{
-  font-family: 'Montserrat', ;
+  font-family: 'Montserrat';
 
 
 }
@@ -22,6 +22,7 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 25px;
+  font-family: 'Montserrat';
 }
 
 .topnav a:hover {
@@ -123,7 +124,7 @@ p {
   margin: 0 0 30px 0;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -134,7 +135,7 @@ h6 {
   font-weight: 400;
   margin: 0 0 20px 0;
   padding: 0;
-}
+} */
 #intro {
   width: 100%;
   height: 60vh;
@@ -169,10 +170,13 @@ h6 {
 }
 
 #intro .intro-content h2 {
-  color: #0c2e8a;
+  color: white;
   margin-bottom: 30px;
   font-size: 64px;
   font-weight: 700;
+  font-family: 'Montserrat';
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF; 
+
 }
 
 #intro .intro-content h2 span {
@@ -192,6 +196,8 @@ h6 {
   transition: 0.5s;
   margin: 10px;
   color: #fff;
+  font-family: 'Montserrat';
+  
 }
 
 #intro .intro-content .btn-get-started {
@@ -215,7 +221,7 @@ h6 {
 }
 
 #intro #intro-carousel {
-  z-index: 8;
+  z-index: 28;
 }
 
 #intro #intro-carousel::before {

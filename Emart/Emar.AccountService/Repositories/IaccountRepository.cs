@@ -14,6 +14,6 @@ namespace Emar.AccountService.Repositories
         void Sellerregister(Seller S);
         List<Buyer> Get();
         List<Seller> GetS();
-
+       
     }
 }

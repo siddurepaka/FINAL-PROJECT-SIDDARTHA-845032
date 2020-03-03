@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="contact-info">
-                    <img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image"/>
+                    <img src="assets/images/sellerlogo.png" alt="Smiley face" height="60px" width="120px">
                     <h2>Add a Product</h2>
                     <h4>We would love to hear from you !</h4>
                 </div>
@@ -11,27 +11,35 @@
             <div class="col-md-9">
                 <div class="contact-form">
                     <form [formGroup]="additemform" (ngSubmit)="OnSubmit()">
-                        <div class=form group>
+                        <!-- <div class=form group>
                             <label class="control-label col-sm-2">ID:</label>
                             <input type="text" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id.errors }" />
                             <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
                                 <div *ngIf="f.id.errors.required">ID is required</div>
                                 <div *ngIf="f.id.pattern">Enter ID</div>
                             </div>                        
-                        </div>
+                        </div> -->
 
                         <div class=form group>
-                            <label class="control-label col-sm-2">Category ID:</label>
-                            <input type="text" formControlName="categoryId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryId.errors }" />
+                            <label class="control-label col-sm-2">Category:</label>
+                            <!-- <input type="text" formControlName="categoryId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryId.errors }" /> -->
+                            <select formControlName="categoryId" class="form-control" (change)="GetAllSubCategory()">
+                                <option *ngFor="let item of categorylist" value="{{item.categoryId}}">{{item.categoryName}}</option>   
+                           </select>
                             <div *ngIf="submitted && f.categoryId.errors" class="invalid-feedback">
                                 <div *ngIf="f.categoryId.errors.required">Category is required</div>
                                 <!-- <div *ngIf="f.cid.pattern">Enter Category</div> -->
                             </div> 
 
                         </div>
+                        
                         <div class=form group>
-                            <label class="control-label col-sm-2">Sub Category ID:</label>
-                            <input type="text" formControlName="subCategoryId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.subCategoryId.errors }" />
+                            <label class="control-label col-sm-2">Sub Category:</label>
+                            <!-- <input type="text" formControlName="subCategoryId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.subCategoryId.errors }" /> -->
+                            <select formControlName="subCategoryId" class="form-control">
+                                <option *ngFor="let item1 of subcategorylist" value="{{item1.subCategoryId}}">{{item1.subCategoryName}}</option>   
+                           </select>
+
                             <div *ngIf="submitted && f.subCategoryId.errors" class="invalid-feedback">
                                 <div *ngIf="f.subCategoryId.errors.required">Sub Category is required</div>
                                 <!-- <div *ngIf="f.scid.pattern">Enter Sub Category</div> -->
@@ -42,7 +50,7 @@
                             <label class="control-label col-sm-2">Seller ID:</label>
                             <input type="text" formControlName="sellerid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.sellerid.errors }" />
                             <div *ngIf="submitted && f.sellerid.errors" class="invalid-feedback">
-                                <div *ngIf="f.sellerid.errors.required">Sub Category is required</div>
+                                <div *ngIf="f.sellerid.errors.required">Seller ID is required</div>
                                 <!-- <div *ngIf="f.scid.pattern">Enter Sub Category</div> -->
                             </div> 
 
@@ -99,7 +107,7 @@
                             </div>
                           </div>
                           
-                          <div class="form-group">        
+                          <!-- <div class="form-group">        
                             <div class="col-sm-offset-2 col-sm-10">
                               <button type="submit" class="btn btn-default" (click)="Search()">Search Item</button>
                             </div>
@@ -109,7 +117,7 @@
                             <div class="col-sm-offset-2 col-sm-10">
                               <button type="submit" class="btn btn-default"(click)="Update()">Update</button>
                             </div>
-                          </div>
+                          </div> -->
                         
                         
                         

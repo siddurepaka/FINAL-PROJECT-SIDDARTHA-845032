@@ -14,7 +14,7 @@ export class RegisterBuyerComponent implements OnInit {
   submitted=false;
   lists:Buyer[];
   buyer:Buyer;
-  id:number;
+  //id:number;
   username:string;
   password:string;
   emailid:string;
@@ -25,11 +25,12 @@ export class RegisterBuyerComponent implements OnInit {
 
   ngOnInit() {
     this.registerForm=this.formBuilder.group({
-      id:['1234',[Validators.required,Validators.pattern("^[1-9]{4}$")]],
-      username:['asedfrtg',[Validators.required,Validators.pattern("^[A-Za-z0-9]{8}$")]],
-      password:['123456',[Validators.required,Validators.pattern("^[A-Za-z0-~`!@#$%^&*-_+=]{6,14}$")]],
-      emailid:['abc@as.com',[Validators.required,Validators.email]],
-      mobileNumber:['9875641254',[Validators.required,Validators.pattern("^[6-9][0-9]{9}$")]],
+      //id:['1234',[Validators.required,Validators.pattern("^[1-9]{4}$")]],
+      username:['',[Validators.required,Validators.pattern("^[A-Za-z0-9]{8}$")]],
+      password:['',[Validators.required,Validators.pattern("^[A-Za-z0-~`!@#$%^&*-_+=]{6,14}$")]],
+      emailid:['',[Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
+    ]],
+      mobileNumber:['',[Validators.required,Validators.pattern("^[6-9][0-9]{9}$")]],
       createdatetime:['',Validators.required]
 
     });
@@ -42,7 +43,7 @@ export class RegisterBuyerComponent implements OnInit {
     {
       alert('Success!!\n\n')
       this.buyer=new Buyer();
-      this.buyer.id=this.registerForm.value["id"];
+      this.buyer.id='EMARTBUY'+Math.round(Math.random()*100);
       this.buyer.username=this.registerForm.value["username"];
       this.buyer.password=this.registerForm.value["password"];
       this.buyer.mobileNumber=this.registerForm.value["mobileNumber"];

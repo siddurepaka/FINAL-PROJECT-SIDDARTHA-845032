@@ -20,5 +20,9 @@ export class AccountService {
   {
     return this.http.post<any>(this.url+'RegisterSeller',seller,Requestheaders);
   }
+  public viewcategory():Observable<any>
+  {
+    return this.http.get<any>(this.url+'viewcategory',Requestheaders);
+  }
 
 }

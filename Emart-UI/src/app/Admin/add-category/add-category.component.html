@@ -11,13 +11,13 @@
             <div class="col-md-9">
                 <div class="contact-form">
                     <form [formGroup]="addcform" (ngSubmit)="OnSubmit()">
-                        <div class=form group>
+                        <!-- <div class=form group>
                             <label class="control-label col-sm-2">ID:</label>
                             <input type="text" formControlName="category_id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.category_id.errors }" />
                             <div *ngIf="submitted && f.category_id.errors" class="invalid-feedback">
                                 <div *ngIf="f.category_id.errors.required">ID is required</div>
                                 <div *ngIf="f.category_id.errors.pattern">Enter ID</div>
-                            </div>
+                            </div> -->
     
                         <div class=form group>
                             <label class="control-label col-sm-2">Category Name:</label>
@@ -41,7 +41,7 @@
                             <div class="col-sm-offset-2 col-sm-10">
                               <button type="submit" class="btn btn-default">Submit</button>
                             </div>
-                          </div>
+                          
                         </div>
                     </form>
                 </div>
