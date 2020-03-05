@@ -8,8 +8,8 @@ namespace Emar.AccountService.Repositories
 {
    public interface IaccountRepository
     {
-        bool Buyerlogin(string username, string password);
-        bool Sellerlogin(string username, string password);
+       Buyer Buyerlogin(string username, string password);
+        Seller Sellerlogin(string username, string password);
         void Buyerregister(Buyer B);
         void Sellerregister(Seller S);
         List<Buyer> Get();

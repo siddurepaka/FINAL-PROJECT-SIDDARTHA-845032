@@ -49,7 +49,7 @@ namespace Emat.SellerService.Controllers
 
         }
         [HttpPut]
-        [Route("Updateitem")]
+        [Route("Updateitems")]
         public IActionResult UpdateItemsStock(Items item)
         {
             try

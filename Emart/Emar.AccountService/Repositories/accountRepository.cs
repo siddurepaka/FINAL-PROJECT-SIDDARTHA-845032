@@ -13,17 +13,10 @@ namespace Emar.AccountService.Repositories
         {
             _context = context;
         }
-        public bool Buyerlogin(string username, string password)
+        public Buyer Buyerlogin(string username, string password)
         {
             Buyer B = _context.Buyer.SingleOrDefault(i => i.Username == username && i.Password == password);
-            if(B.Username==username && B.Password==password)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return B;
         }
 
         public void Buyerregister(Buyer B)
@@ -33,17 +26,10 @@ namespace Emar.AccountService.Repositories
            
         }
 
-        public bool Sellerlogin(string username, string password)
+        public Seller Sellerlogin(string username, string password)
         {
             Seller S = _context.Seller.SingleOrDefault(i => i.Username == username && i.Password == password);
-            if (S.Username == username && S.Password == password)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return S;
 
         }
 

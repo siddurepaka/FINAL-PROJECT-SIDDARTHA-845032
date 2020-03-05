@@ -23,6 +23,7 @@ import { RegisterSellerComponent } from './Accounts/register-seller/register-sel
 import { RegisterBuyerComponent } from './Accounts/register-buyer/register-buyer.component';
 import { HomeComponent } from './Accounts/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ViewSellerProfileComponent } from './seller/view-seller-profile/view-seller-profile.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     RegisterSellerComponent,
     RegisterBuyerComponent,
-    HomeComponent
+    HomeComponent,
+    ViewSellerProfileComponent
   ],
   imports: [
     BrowserModule,

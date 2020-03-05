@@ -32,11 +32,23 @@ namespace Emar.AccountService.Controllers
         [Route("Buyerlogin/{username}/{password}")]
         public IActionResult Buyerlogin(string username, string password)
         {
+            Token token = null;
             try
             {
-                return Ok(GenerateJwtToken(username));
+                Buyer buyer = _repo.Buyerlogin(username, password);
+                if (buyer != null)
+                {
+                    token = new Token() { buyerid = buyer.Id, token = GenerateJwtToken(username), message = "success", username = username };
+                }
+                else
+                {
+                    token = new Token() { token = null, message = "Unsuccess" };
 
+                }
+                return Ok(token);
             }
+
+
             catch (Exception ex)
             {
                 return NotFound(ex.Message);
@@ -46,15 +58,29 @@ namespace Emar.AccountService.Controllers
         [Route("Sellerlogin/{username}/{password}")]
         public IActionResult Sellerlogin(string username, string password)
         {
+           Token token = null;
             try
             {
-                return Ok(GenerateJwtToken(username));
+
+                Seller seller = _repo.Sellerlogin(username, password);
+                if (seller != null)
+                {
+                    token = new Token() { sellerid = seller.Id, token = GenerateJwtToken(username), message = "success",username=username};
+                }
+                else
+                {
+                    token = new Token() { token = null, message = "unsuccess" };
+                }
+                return Ok(token);
+
 
             }
             catch (Exception ex)
             {
                 return NotFound(ex.Message);
             }
+
+
         }
         [HttpPost]
         [Route("RegisterBuyer")]
@@ -100,7 +126,7 @@ namespace Emar.AccountService.Controllers
             return Ok(_repo.GetS());
         }
        
-        private Token GenerateJwtToken(string uname)
+        private string GenerateJwtToken(string uname)
         {
             var claims = new List<Claim>
             {
@@ -123,10 +149,10 @@ namespace Emar.AccountService.Controllers
 
             var response = new Token
             {
-                uname = uname,
+                username = uname,
                 token = new JwtSecurityTokenHandler().WriteToken(token)
             };
-            return response;
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
 

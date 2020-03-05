@@ -4,14 +4,21 @@
             <div class="col-md-3">
                 <div class="contact-info">
                     <img src="assets/images/main logo.png" alt="Smiley face" height="60px" width="120px">
-                    <h2>Sign in As a Buyer</h2>
+                    <h2>Login</h2>
                     <h4>We would love to hear from you !</h4>
                 </div>
             </div>
             <div class="col-md-9">
                 <div class="contact-form">
                     <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
-                       
+                        
+                        <label> <input type="radio" formControlName="role" value="buyer" name="role">Buyer
+                        </label>
+                        <label> <input type="radio" formControlName="role" value="seller" name="role">Seller
+                        </label>
+        
+                       <br/>
+                       <br/>
                         <div class=form group>
                             <label class="control-label col-sm-2">UserName:</label>
                             <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />

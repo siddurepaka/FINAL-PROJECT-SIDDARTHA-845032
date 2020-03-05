@@ -1,1 +1,13 @@
-<router-outlet></router-outlet>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+<div class = "bg">
+<div class="topnav">
+  
+    <a class="col-sm-4"[routerLink]="['/admin/add-category']">Add Category</a>
+    <a class="col-sm-4"[routerLink]="['/admin/add-sub-category']">Add Sub Category</a>
+    <a class="col-sm-4"[routerLink]="['']">Logout</a>
+  </div>
+  <router-outlet></router-outlet>
+</div>
+
+
+
