@@ -20,9 +20,9 @@ export class SellerService {
     return this.http.post(this.url+'Item/AddItems',items,Requestheaders);
   }
 
-  public ViewItems(sellerid:string):Observable<any>
+  public ViewItems(sellerid:string):Observable<Items[]>
   {
-    return this.http.get(this.url+'Item/ViewItems/'+sellerid,Requestheaders);
+    return this.http.get<Items[]>(this.url+'Item/ViewItems/'+sellerid,Requestheaders);
   }
   public ViewProfile(id:string):Observable<any>
   {
@@ -38,7 +38,7 @@ export class SellerService {
   }
   public UpdateItems(items:Items):Observable<any>
   {
-    return this.http.put<any>(this.url+'Item/Updateitems',items,Requestheaders);
+    return this.http.put<any>(this.url+'Item/Updateitems',JSON.stringify(items),Requestheaders);
   }
   public GetCategories():Observable<any>
   {

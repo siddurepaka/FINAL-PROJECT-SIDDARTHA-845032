@@ -143,6 +143,11 @@ namespace Emat.SellerService.Models
                     .HasMaxLength(20)
                     .IsUnicode(false);
 
+                entity.Property(e => e.Image)
+                    .HasColumnName("image")
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.ItemDescription)
                     .IsRequired()
                     .HasColumnName("item_description")

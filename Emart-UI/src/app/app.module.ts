@@ -25,6 +25,9 @@ import { HomeComponent } from './Accounts/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewSellerProfileComponent } from './seller/view-seller-profile/view-seller-profile.component';
 
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +57,8 @@ import { ViewSellerProfileComponent } from './seller/view-seller-profile/view-se
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

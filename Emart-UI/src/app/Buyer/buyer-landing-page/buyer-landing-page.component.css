@@ -2,11 +2,11 @@
 
 body {
   margin: 0;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-family: 'Montserrat';
 
 }
 .a{
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-family: 'Montserrat';
 }
 
 .topnav {
@@ -95,43 +95,39 @@ body {
 	text-shadow: 0 1px 2px #000;
 	position: absolute;
 	bottom: 60px;
-	left: 80px;
+  left: 80px;
+  font-family: 'Montserrat';
 }
 
 
 /* cards */
-body {
-  padding: 2em;
-}
 .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  /* margin: auto; */
+  text-align: center;
+  font-family: 'Montserrat';
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
   border: none;
-}
-img,
-.card-img-top {
-  border-radius: 0em;
-}
-
-@media (min-width: 576px) {
-  .card-columns {
-    column-count: 2;
-  }
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
 }
 
-@media (min-width: 768px) {
-  .card-columns {
-    column-count: 3;
-  }
+.card button:hover {
+  opacity: 0.7;
 }
 
-@media (min-width: 992px) {
-  .card-columns {
-    column-count: 4;
-  }
-}
-
-@media (min-width: 1200px) {
-  .card-columns {
-    column-count: 5;
-  }
-}
 

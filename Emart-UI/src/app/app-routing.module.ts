@@ -31,7 +31,7 @@ const routes: Routes = [
   {path:'seller-landing-page',component:SellerLandingPageComponent,children:[
     {path:'add-items',component:AddItemsComponent},
     {path:'view-items',component:ViewItemsComponent},
-    {path:'view-profile',component:ViewProfileComponent},
+    {path:'view-seller-profile',component:ViewProfileComponent},
     {path:'view-reports',component:ViewReportsComponent}
   ]},
   {path:'admin',component:AdminComponent,children:[

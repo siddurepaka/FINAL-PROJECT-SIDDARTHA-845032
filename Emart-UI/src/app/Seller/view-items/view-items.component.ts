@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import{SellerService}from 'src/app/services/seller.service';
-import{Items}from'src/app/model/items'
+import{Items}from'src/app/model/items';
+
 
 @Component({
   selector: 'app-view-items',
@@ -53,8 +54,8 @@ export class ViewItemsComponent implements OnInit {
     item.subCategoryId=this.viewform.value["subcategoryId"]
     item.itemName=this.viewform.value["itemName"];
 
-    item.price=this.viewform.value["price"];
-    item.stockNumber=this.viewform.value["stockNumber"];
+    item.price=Number(this.viewform.value["price"]);
+    item.stockNumber=Number(this.viewform.value["stockNumber"]);
      item.itemDescription=this.viewform.value["itemDescription"];
     item.remarks=this.viewform.value["remarks"];
 this.service.UpdateItems(item).subscribe(res=>{console.log('Record updated')})

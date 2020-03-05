@@ -20,6 +20,7 @@ export class AddItemsComponent implements OnInit {
   categorylist:Category[];
   subcategorylist:SubCategory[];
   categoryId:string;
+  image:string;
   
 
 
@@ -43,6 +44,7 @@ export class AddItemsComponent implements OnInit {
     itemDescription:['',Validators.required],
     stockNumber:['',Validators.required],
     remarks:['',Validators.required],
+    image:['']
     });
   }
    OnSubmit()
@@ -59,7 +61,8 @@ export class AddItemsComponent implements OnInit {
     this.item.itemName=this.additemform.value['itemName'],
     this.item.itemDescription=this.additemform.value['itemDescription'],
     this.item.stockNumber=Number(this.additemform.value['stockNumber']),
-    this.item.remarks=this.additemform.value['remarks']
+    this.item.remarks=this.additemform.value['remarks'],
+    this.item.image=this.image;
     console.log(this.item); 
     this.service.Additems(this.item).subscribe(res=>{
       alert('Item Added Successfully');
@@ -125,6 +128,11 @@ GetAllSubCategory()
       console.log(this.subcategorylist);
     })
   }
+  fileEvent(event){
+    this.image = event.target.files[0].name;
+}
+
+
 
 }
 

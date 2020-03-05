@@ -19,6 +19,7 @@ namespace Emat.SellerService.Models
         public string ItemDescription { get; set; }
         public int StockNumber { get; set; }
         public string Remarks { get; set; }
+        public string Image { get; set; }
 
         public virtual Category Category { get; set; }
         public virtual Seller Seller { get; set; }

@@ -1,11 +1,12 @@
+<link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
 <div class="topnav">
   <a href="#home"><img src="assets/images/logo.png" alt="Smiley face" height="60px" width="120px"></a>
-  <a href="#"><i class="fa fa-fw fa-user mt-5"></i>about us</a>
-  <a href="#"><i class="fa fa-fw fa-phone mt-5"></i>Contact</a>
+  <!-- <a href="#"><i class="fa fa-fw fa-user mt-5"></i>about us</a> -->
+  <!-- <a href="#"><i class="fa fa-fw fa-phone mt-5"></i>Contact</a> -->
    <a href="#"><span class="glyphicon glyphicon-sunglasses mt-5"></span>viewcart</a>
   <a href="#"><span class="glyphicon glyphicon-time mt-5"></span>PurchaseHistory</a>
-  <a href="#"><span class="glyphicon glyphicon-shopping-cart mt-5"></span>BuyProduct</a>
-   <a href="#" id="l" ><i class="fa fa-fw fa-user mt-5"></i>logout</a> -->
+  <a href="#"><span class="glyphicon glyphicon-eye-open mt-5"></span>view profile</a>
+   <a href="#" id="l" ><i class="glyphicon glyphicon-off mt-5"></i>logout</a>
   <!-- <a href="#" id="l" ><img src="assets/images/login.png " height="50px" width="120px" class="mt-3"></a> 
   <div class="dropdown" id="l">
       <button type="button" class="btn btn-outline mt-3 dropdown-toggle" data-toggle="dropdown">
@@ -20,53 +21,36 @@
     -->
     
 
-  <div class="search-container">
+  <div class="search-container mt-5">
     <form action="/action_page.php">
-      <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
+      <input type="text" placeholder="Search.." name="search"[(ngModel)]="itemName">
+      <button type="submit"(click)="search(itemName)"><i class="fa fa-search"></i></button>
     </form>
   </div>
 </div>
 
+  <router-outlet></router-outlet>
   <div class="row">
-    <div class="col-sm-8">
-  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-      <div class="carousel-item active">
-        <p class="carouselTitle">Arashiyama</p>
-        <img src="http://kclui.com/IVEST/ITP4208/images/BS4Carousel/carousel-1.jpg" alt="First slide">
+
+  
+    <!-- <h1 class="display-1">Ocean of Items</h1> -->
+      
+      <!-- cards -->
+      <div class="card col-sm-2"*ngFor="let i of itemlist" >
+        <img src="/assets/images/p1.jpg" alt="Denim Jeans" style="width:100%">
+        <h1>{{i.itemName}} </h1>
+        <p class="price">{{i.price}}</p>
+        <p>{{i.itemDescription}}</p>
+        <p><button>Buy Now</button></p>
+        <p><button>Add to Cart</button></p>
       </div>
-      <div class="carousel-item">
-        <p class="carouselTitle">Uji</p>
-        <img src="http://kclui.com/IVEST/ITP4208/images/BS4Carousel/carousel-2.jpg" alt="Second slide">
-      </div>
-      <div class="carousel-item">
-        <p class="carouselTitle">Kiyomizu-dera</p>
-        <img src="http://kclui.com/IVEST/ITP4208/images/BS4Carousel/carousel-3.jpg" alt="Third slide">
-      </div>
+      
+      
+       
     </div>
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-      <span class="icon-prev" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-      <span class="icon-next" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-  </div>
+    <br/>
+    <br/>
   
-<h1 class="display-1">Ocean of Items</h1>
-  
-  <!-- cards -->
-  
-   
-</div>
 
   
 
