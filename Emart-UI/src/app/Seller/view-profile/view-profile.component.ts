@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import{SellerService}from 'src/app/services/seller.service';
+import{}from 'src/app/model/seller'
 
 @Component({
   selector: 'app-view-profile',

@@ -3,10 +3,10 @@ export class Seller {
 username:string;
 password:string;
 emailid:string;
-ContactNumber:number;
+contactNumber:number;
 companyName:string;
-Gstin:number;
-BriefAboutCompany:string;
+gstin:number;
+briefAboutCompany:string;
 postalAddress:string;
 website:string;
 

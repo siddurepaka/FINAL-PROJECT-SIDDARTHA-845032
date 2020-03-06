@@ -44,16 +44,6 @@ export class LoginComponent implements OnInit {
       else
       {
         
-        // console.log(this.loginform.value);
-        // console.log(JSON.stringify(this.loginform.value))
-        // console.log(this.loginform.value["username"])
-        // console.log(this.loginform.value["password"])
-        // this.buyer.username=this.loginform.value["username"]
-        // this.buyer.password=this.loginform.value["password"]
-        // console.log(this.buyer)
-        // this.seller.username=this.loginform.value["username"]
-        // this.seller.password=this.loginform.value["password"]
-        // console.log(this.seller)
         let username=this.loginform.value['username'];
   let password=this.loginform.value['password'];
   let role=this.loginform.value['role'];

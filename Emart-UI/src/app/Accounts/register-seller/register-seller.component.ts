@@ -23,7 +23,7 @@ export class RegisterSellerComponent implements OnInit {
   ngOnInit() {
     this.registerform=this.formBuilder.group({
      // id:['',[Validators.required,Validators.pattern("^[1-9]{4}$")]],
-      username:['',[Validators.required,Validators.pattern("^[A-Za-z0-9]{8}$")]],
+      username:['',[Validators.required,Validators.pattern("^[A-Za-z0-9]{4,8}$")]],
       password:['',Validators.required],
 companyName:['',Validators.required],
 Gstin:['',Validators.required],
@@ -46,11 +46,11 @@ ContactNumber:['',[Validators.required,Validators.pattern("^[6-9][0-9]{9}$")]]
       this.seller.username=this.registerform.value["username"],
       this.seller.password=this.registerform.value["password"],
       this.seller.emailid=this.registerform.value["emailid"],
-      this.seller.ContactNumber=this.registerform.value["ContactNumber"],
+      this.seller.contactNumber=this.registerform.value["ContactNumber"],
       this.seller.companyName=this.registerform.value["companyName"],
       this.seller.postalAddress=this.registerform.value["postalAddress"],
-      this.seller.BriefAboutCompany=this.registerform.value["BriefAboutCompany"],
-      this.seller.Gstin=this.registerform.value["Gstin"],
+      this.seller.briefAboutCompany=this.registerform.value["BriefAboutCompany"],
+      this.seller.gstin=this.registerform.value["Gstin"],
       this.seller.website=this.registerform.value["website"]
       console.log(this.seller); 
       this.service.RegisterSeller(this.seller).subscribe(res=>{

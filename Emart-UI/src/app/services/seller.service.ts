@@ -24,9 +24,9 @@ export class SellerService {
   {
     return this.http.get<Items[]>(this.url+'Item/ViewItems/'+sellerid,Requestheaders);
   }
-  public ViewProfile(id:string):Observable<any>
+  public ViewProfile(id:string):Observable<Seller>
   {
-      return this.http.get<any>(this.url+'Seller/GetProfile/'+id,Requestheaders);
+      return this.http.get<Seller>(this.url+'Seller/GetProfile/'+id,Requestheaders);
   }
   public Update(seller:Seller):Observable<any>
   {

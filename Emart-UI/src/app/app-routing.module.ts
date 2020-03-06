@@ -19,6 +19,7 @@ import { LoginComponent } from './Accounts/login/login.component';
 import { RegisterBuyerComponent } from './Accounts/register-buyer/register-buyer.component';
 import { RegisterSellerComponent } from './Accounts/register-seller/register-seller.component';
 import{HomeComponent} from './Accounts/home/home.component'
+import{ViewSellerProfileComponent}from './Seller/view-seller-profile/view-seller-profile.component'
 
 const routes: Routes = [
   {path:'buyer-landing-page',component:BuyerLandingPageComponent,children:[
@@ -31,7 +32,7 @@ const routes: Routes = [
   {path:'seller-landing-page',component:SellerLandingPageComponent,children:[
     {path:'add-items',component:AddItemsComponent},
     {path:'view-items',component:ViewItemsComponent},
-    {path:'view-seller-profile',component:ViewProfileComponent},
+    {path:'view-seller-profile',component:ViewSellerProfileComponent},
     {path:'view-reports',component:ViewReportsComponent}
   ]},
   {path:'admin',component:AdminComponent,children:[

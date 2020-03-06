@@ -1,1 +1,82 @@
-<p>view-seller-profile works!</p>
+<div class="bg">
+    <div class="container contact">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="contact-info">
+                    <img src="assets/images/sellerlogo.png" alt="Smiley face" height="60px" width="120px">
+                    <h2>Seller update form</h2>
+                    <h4>We would love to hear from you !</h4>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="contact-form">
+                    <form [formGroup]="sviewform" (ngSubmit)="OnSubmit()">
+                         <div class=form group>
+                            <label class="control-label col-sm-2">ID:</label>
+                            <input type="text" formControlName="id" class="form-control" readonly />
+                           
+                        </div>
+    
+                        <div class=form group>
+                            <label class="control-label col-sm-2">UserName:</label>
+                            <input type="text" formControlName="username" class="form-control" readonly/>
+                         </div>
+
+                        <div class = form group>
+                            <label class="control-label col-sm-2">Password:</label>
+                            <input type="password" formControlName="password" class="form-control" />
+                        </div>
+                        <div class=form group>
+                            <label class="control-label col-sm-2">Email:</label>
+                            <input type="text" formControlName="emailid" class="form-control"/>
+
+                        </div>
+    
+                        <div class =form group>
+                            <label class="control-label col-sm-2">Company Name:</label>
+                            <input type="text" formControlName="companyName" class="form-control"/>
+                            </div>
+    
+                        <div class =form group>
+                            <label class="control-label col-sm-2">GstIN:</label>
+                            <input type="text" formControlName="Gstin" class="form-control"/>
+                            
+                        </div>
+                     
+                        <div class =form group>
+                            <label class="control-label col-sm-2">Brief About Company:</label>
+                            <input type="text" formControlName="BriefAboutCompany" class="form-control"/>
+                           
+                        </div>
+                        
+                        <div class=form group>
+                            <label class="control-label col-sm-2">Postal Address:</label>
+                            <input type="text" formControlName="postalAddress" class="form-control"/>
+                       
+                        </div>
+                        
+                        <div class=form group>
+                            <label class="control-label col-sm-2">Website:</label>
+                            <input type="text" formControlName="website"  class="form-control" />
+                        </div>
+                        
+                        <div class=form-group>
+                            <label class="control-label col-sm-2">Mobile:</label>
+                            <input type="text" formControlName="ContactNumber" maxlength="10" class="form-control" />
+                          </div>
+                    
+                        <div class="form-group">        
+                            <div class="col-sm-offset-2 col-sm-10">
+                              <button type="submit" class="btn btn-default"(click)="Update()">Update</button>
+                            </div>
+                          </div>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+     </div>
+    </div>
+            
+    
+    

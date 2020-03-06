@@ -84,7 +84,7 @@
                     <div class=form group>
                         <label class="control-label col-sm-2">Website:</label>
                         <!-- <input type="text" size="2" value="+91" readonly="readonly"> -->
-                        <input type="text" formControlName="website" maxlength="10" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.website.errors }" />
+                        <input type="text" formControlName="website"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.website.errors }" />
                         <div *ngIf="submitted && f.website.errors" class="invalid-feedback">
                             <div *ngIf="f.website.errors.required">Website is Required</div>
                             <div *ngIf="f.website.errors.pattern">Enter a Valid website</div>
