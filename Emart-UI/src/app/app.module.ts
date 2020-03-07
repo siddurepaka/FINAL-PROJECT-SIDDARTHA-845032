@@ -28,6 +28,7 @@ import { ViewSellerProfileComponent } from './Seller/view-seller-profile/view-se
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +51,8 @@ import { ViewSellerProfileComponent } from './Seller/view-seller-profile/view-se
     LoginComponent,
     RegisterSellerComponent,
     RegisterBuyerComponent,
-    HomeComponent
+    HomeComponent,
+  
     
   ],
   imports: [

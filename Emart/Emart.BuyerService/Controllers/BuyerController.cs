@@ -111,5 +111,86 @@ namespace Emart.BuyerService.Controllers
                 return NotFound(ex.InnerException.Message);
             }
         }
+        [HttpGet]
+        [Route("GetCategories")]
+        public IActionResult GetCategories()
+        {
+            try
+            {
+                return Ok(_repo.GetCategories());
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("GetSubCategories/{category_id}")]
+        public IActionResult GetCategories(string category_id)
+        {
+            try
+            {
+                return Ok(_repo.GetSubCategories(category_id));
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("GetAllItems")]
+        public IActionResult GetAllItems()
+        {
+            try
+            {
+                return Ok(_repo.GetAllItems());
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+        [HttpPost]
+        [Route("AddtoCart")]
+        public IActionResult AddtoCart(Cart cart)
+        {
+            try
+            {
+                _repo.AddtoCart(cart);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.InnerException.Message);
+            }
+        }
+        [HttpGet]
+        [Route("GetCartItems/{buyerid}")]
+        public IActionResult GetCartItems(string buyerid)
+        {
+            try
+            {
+                return Ok(_repo.GetCartItems(buyerid));
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+        [HttpDelete]
+        [Route("DeleteCartItem/{cartid}")]
+        public IActionResult DeleteCartItem(string cartid)
+        {
+            try
+            {
+                _repo.DeleteCartItem(cartid);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
     }
+
 }

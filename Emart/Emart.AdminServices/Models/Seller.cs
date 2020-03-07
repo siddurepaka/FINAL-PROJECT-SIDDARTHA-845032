@@ -7,6 +7,7 @@ namespace Emart.AdminServices.Models
     {
         public Seller()
         {
+            Cart = new HashSet<Cart>();
             Items = new HashSet<Items>();
             PurchaseHistory = new HashSet<PurchaseHistory>();
         }
@@ -22,6 +23,7 @@ namespace Emart.AdminServices.Models
         public string PostalAddress { get; set; }
         public string Website { get; set; }
 
+        public virtual ICollection<Cart> Cart { get; set; }
         public virtual ICollection<Items> Items { get; set; }
         public virtual ICollection<PurchaseHistory> PurchaseHistory { get; set; }
     }

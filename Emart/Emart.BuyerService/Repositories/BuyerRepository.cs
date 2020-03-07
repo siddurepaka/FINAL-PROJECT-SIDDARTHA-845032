@@ -13,11 +13,28 @@ namespace Emart.BuyerService.Repositories
         {
             _context = context ;
         }
+
+        public void AddtoCart(Cart cart)
+        {
+            _context.Add(cart);
+            _context.SaveChanges();
+
+
+        }
+
         public void BuyItem(PurchaseHistory obj)
         {
             _context.Add(obj);
             _context.SaveChanges();
            
+        }
+
+        public void DeleteCartItem(string cartid)
+        {
+            Cart cart = _context.Cart.Find(cartid);
+            _context.Cart.Remove(cart);
+            _context.SaveChanges();
+
         }
 
         public void EditProfile(Buyer obj)
@@ -27,9 +44,31 @@ namespace Emart.BuyerService.Repositories
             
         }
 
+        public List<Items> GetAllItems()
+        {
+            return _context.Items.ToList();
+        }
+
+        public List<Cart> GetCartItems(string bid)
+        {
+            return _context.Cart.Where(e => e.Buyerid == bid).ToList();
+            
+        }
+
+        public List<Category> GetCategories()
+        {
+            return _context.Category.ToList();
+        }
+
         public Buyer GetProfile(string id)
         {
             return _context.Buyer.Find(id);
+        }
+
+        public List<SubCategory> GetSubCategories(string cid)
+        {
+            return _context.SubCategory.Where(i => i.CategoryId == cid).ToList();
+
         }
 
         public List<PurchaseHistory> PurchaseHistory(string bid)

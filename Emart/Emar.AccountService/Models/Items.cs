@@ -7,6 +7,7 @@ namespace Emar.AccountService.Models
     {
         public Items()
         {
+            Cart = new HashSet<Cart>();
             PurchaseHistory = new HashSet<PurchaseHistory>();
         }
 
@@ -19,10 +20,12 @@ namespace Emar.AccountService.Models
         public string ItemDescription { get; set; }
         public int StockNumber { get; set; }
         public string Remarks { get; set; }
+        public string Image { get; set; }
 
         public virtual Category Category { get; set; }
         public virtual Seller Seller { get; set; }
         public virtual SubCategory SubCategory { get; set; }
+        public virtual ICollection<Cart> Cart { get; set; }
         public virtual ICollection<PurchaseHistory> PurchaseHistory { get; set; }
     }
 }

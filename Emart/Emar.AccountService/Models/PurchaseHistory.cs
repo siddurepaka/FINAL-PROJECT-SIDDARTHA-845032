@@ -12,6 +12,7 @@ namespace Emar.AccountService.Models
         public string TransactionType { get; set; }
         public DateTime DateTime { get; set; }
         public string Remarks { get; set; }
+        public string Numberofitems { get; set; }
 
         public virtual Buyer Buyer { get; set; }
         public virtual Items Item { get; set; }

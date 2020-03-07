@@ -1,12 +1,12 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
 <div class="topnav">
-  <a href="#home"><img src="assets/images/logo.png" alt="Smiley face" height="60px" width="120px"></a>
+  <a href="#home"><img src="assets/images/main logo.png" alt="Smiley face" height="60px" width="120px"></a>
   <!-- <a href="#"><i class="fa fa-fw fa-user mt-5"></i>about us</a> -->
   <!-- <a href="#"><i class="fa fa-fw fa-phone mt-5"></i>Contact</a> -->
    <a href="#"><span class="glyphicon glyphicon-sunglasses mt-5"></span>viewcart</a>
   <a href="#"><span class="glyphicon glyphicon-time mt-5"></span>PurchaseHistory</a>
   <a href="#"><span class="glyphicon glyphicon-eye-open mt-5"></span>view profile</a>
-   <a href="#" id="l" ><i class="glyphicon glyphicon-off mt-5"></i>logout</a>
+   <a href="#" id="l" ><i class="glyphicon glyphicon-off mt-5" ></i>logout</a>
   <!-- <a href="#" id="l" ><img src="assets/images/login.png " height="50px" width="120px" class="mt-3"></a> 
   <div class="dropdown" id="l">
       <button type="button" class="btn btn-outline mt-3 dropdown-toggle" data-toggle="dropdown">
@@ -29,7 +29,8 @@
   </div>
 </div>
 
-  <router-outlet></router-outlet>
+
+ 
   <div class="row">
 
   
@@ -37,12 +38,12 @@
       
       <!-- cards -->
       <div class="card col-sm-2"*ngFor="let i of itemlist" >
-        <img src="/assets/images/{{i.image]]" alt="Denim Jeans" style="width:100%">
+        <img src="/assets/images/{{i.image}}" alt="Denim Jeans" style="width:100%">
         <h1>{{i.itemName}} </h1>
         <p class="price">{{i.price}}</p>
         <p>{{i.itemDescription}}</p>
         <p><button>Buy Now</button></p>
-        <p><button>Add to Cart</button></p>
+        <p><button (click)="AddtoCart(item)">Add to Cart</button></p>
       </div>
       
       
@@ -50,6 +51,24 @@
     </div>
     <br/>
     <br/>
+    <div class="container"> 
+    <div class="row">
+
+  
+        <div style="margin-left: 50px;" class="card col-md-4"*ngFor="let i of list" >
+          <img src="/assets/images/{{i.image}}" alt="product" style="width:100%">
+          <h1>{{i.itemName}} </h1>
+          <p class="price">{{i.price}}</p>
+          <p>{{i.itemDescription}}</p>
+          <p><button>Buy Now</button></p>
+          <p><button (click)="AddtoCart(i)">Add to Cart</button></p>
+        </div>
+        </div>
+        
+        <router-outlet></router-outlet>
+         
+      </div>
+    
   
 
   

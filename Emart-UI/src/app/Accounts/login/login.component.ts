@@ -54,6 +54,7 @@ export class LoginComponent implements OnInit {
   let token=new Token();
 this.service.BuyerLogin(username,password).subscribe(res=>{token=res;console.log(token)
   if(token.message=="success"){
+    localStorage.setItem('buyer',token.buyerid);
     alert("Form is Validated");
     
   this.route.navigateByUrl("buyer-landing-page")

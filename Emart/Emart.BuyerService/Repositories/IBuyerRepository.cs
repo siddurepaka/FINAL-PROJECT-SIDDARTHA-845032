@@ -15,6 +15,13 @@ namespace Emart.BuyerService.Repositories
         void EditProfile(Buyer obj);
         void BuyItem(PurchaseHistory obj);
         List<PurchaseHistory> PurchaseHistory(string bid);
-
+        List<SubCategory> GetSubCategories(string cid);
+        List<Items> GetAllItems();
+        void AddtoCart(Cart cart);
+        List<Cart> GetCartItems(string bid);
+        void DeleteCartItem(string cartid);
+        List<Category> GetCategories();
     }
+
 }
+
