@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emar.AccountService", "Emar
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emat.SellerService", "Emat.SellerService\Emat.SellerService.csproj", "{B288D86A-302F-41AB-A7F5-89772B497DDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emart.AdminServices", "Emart.AdminServices\Emart.AdminServices.csproj", "{540E918C-8CA3-4F70-93B3-5101485DC65B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emart.AdminServices", "Emart.AdminServices\Emart.AdminServices.csproj", "{540E918C-8CA3-4F70-93B3-5101485DC65B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emart-Test", "Emart-Test\Emart-Test.csproj", "{ACF00E7D-237B-4DCC-944C-7C6ACD839D43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{540E918C-8CA3-4F70-93B3-5101485DC65B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{540E918C-8CA3-4F70-93B3-5101485DC65B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{540E918C-8CA3-4F70-93B3-5101485DC65B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACF00E7D-237B-4DCC-944C-7C6ACD839D43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACF00E7D-237B-4DCC-944C-7C6ACD839D43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACF00E7D-237B-4DCC-944C-7C6ACD839D43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACF00E7D-237B-4DCC-944C-7C6ACD839D43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,1 +1,14 @@
-<p>search works!</p>
+<div class="container"> 
+    <div class="row">
+
+  
+        <div style="margin-left: 30px;" class="card col-md-3"*ngFor="let i of list" >
+          <img src="/assets/images/{{i.image}}" alt="product" style="width:100%">
+          <h1>{{i.itemName}} </h1>
+          <p class="price">{{i.price}}</p>
+          <p>{{i.itemDescription}}</p>
+          <p><button  [routerLink]="['/buyer-landing-page/buy-product']">Buy Now</button></p>
+          <p><button (click)="AddtoCart(i)">Add to Cart</button></p>
+        </div>
+        </div>
+    

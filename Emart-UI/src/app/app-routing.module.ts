@@ -45,7 +45,8 @@ const routes: Routes = [
     {path:'login',component:LoginComponent},
   {path:'register-buyer',component:RegisterBuyerComponent},
   {path:'register-seller',component:RegisterSellerComponent}
-  ]}
+  ]},
+  {path:'',component:HomeComponent}
 ];
 
 

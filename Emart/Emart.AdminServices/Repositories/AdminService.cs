@@ -46,6 +46,18 @@ namespace Emart.AdminServices.Repositories
 
         }
 
+        public Category GetCategorybyid(string cid)
+        {
+            
+            return _context.Category.Find(cid);
+            
+        }
+
+        public SubCategory GetSubCategorybyid(string scid)
+        {
+            return _context.SubCategory.Find(scid);
+        }
+
         public List<Category> viewcategory()
         {
             return _context.Category.ToList();

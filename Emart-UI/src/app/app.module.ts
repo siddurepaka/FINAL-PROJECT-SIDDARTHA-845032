@@ -8,7 +8,6 @@ import { SearchComponent } from './Buyer/search/search.component';
 import { ViewCartComponent } from './Buyer/view-cart/view-cart.component';
 import { PurchaseHistoryComponent } from './Buyer/purchase-history/purchase-history.component';
 import { BuyProductComponent } from './Buyer/buy-product/buy-product.component';
-import { ViewProfileComponent } from './Buyer/view-profile/view-profile.component';
 import { SellerLandingPageComponent } from './Seller/seller-landing-page/seller-landing-page.component';
 import { AddItemsComponent } from './Seller/add-items/add-items.component';
 import { ViewItemsComponent } from './Seller/view-items/view-items.component';
@@ -24,6 +23,9 @@ import { RegisterBuyerComponent } from './Accounts/register-buyer/register-buyer
 import { HomeComponent } from './Accounts/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewSellerProfileComponent } from './Seller/view-seller-profile/view-seller-profile.component';
+import { AddtocartComponent } from './Buyer/addtocart/addtocart.component';
+
+import{ViewProfileComponent}from './Buyer/view-profile/view-profile.component'
 
 
 
@@ -52,6 +54,8 @@ import { ViewSellerProfileComponent } from './Seller/view-seller-profile/view-se
     RegisterSellerComponent,
     RegisterBuyerComponent,
     HomeComponent,
+    AddtocartComponent,
+    ViewProfileComponent
   
     
   ],

@@ -1,1 +1,45 @@
-<p>view-cart works!</p>
+<!-- <div class="container">
+    <div class="row">
+         
+    <div class="col-md-4" *ngFor="let cart of cartlist">
+        <div class="card " style="width:350px;">
+          <img class="card-img-top" src="/assets/images/{{cart.image}}" alt="Card image cap">
+          <div class="card-body"  > 
+            <h5 class="card-title text-center">Item</h5>
+            <td>Cartid:{{cart.cartid}}</td><br>
+           <td> ItemId:{{cart.id}}</td><br>
+           <td>CategoryId:{{cart.categoryid}}</td><br>
+            <td>SubCategoryId:{{cart.Subcategoryid}}</td><br>
+            <td>SellerId:{{cart.sellerid}}</td><br>
+            <td>ItemName:{{cart.itemname}}</td><br>
+           <td> Description:{{cart.itemdescription}}</td><br>
+           <td>price:{{cart.price}}</td><br>
+           <td>Stock:{{cart.stocknumber}}</td><br>
+            <td>Remarks:{{cart.remarks}}</td>
+          </div>
+          <div class="card-footer">
+          <div class="text-center">
+            <button class="btn btn-primary mr-1" (click)=" BuyNow(cart)">BuyNow</button>
+            <button class="btn btn-primary" (click)="Remove(cart.cartid)">Remove</button>
+        </div>
+        </div>
+        </div>
+        <br>
+       </div>
+        </div>
+      </div> -->
+      <div class="container"> 
+        <div class="row">
+    
+      
+            <div style="margin-left: 30px;" class="card col-md-3"*ngFor="let cart of cartlist" >
+              <img src="/assets/images/{{cart.image}}" alt="product" style="width:100%">
+              <h1>{{cart.itemname}} </h1>
+              <p class="price">{{cart.price}}</p>
+              <p>{{cart.itemdescription}}</p>
+              <p><button [routerLink]="['/buyer-landing-page/buy-product']">Buy Now</button></p>
+              <p><button (click)="Remove(cart.cartid)">Remove Cart</button></p>
+            </div>
+            </div>
+        
+

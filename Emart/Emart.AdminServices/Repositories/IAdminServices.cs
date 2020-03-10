@@ -14,5 +14,7 @@ namespace Emart.AdminServices.Repositories
         void DeleteCategory(string cid);
         void DeleteSubCategory(string scid);
         List<Category> viewcategory();
+        Category GetCategorybyid(string cid);
+        SubCategory GetSubCategorybyid(string scid);
     }
 }

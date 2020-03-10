@@ -54,7 +54,7 @@ export class ViewProfileComponent implements OnInit {
       
       this.Buyer.username=this.editform.value["username"];
       this.Buyer.emailid=this.editform.value["emailid"];
-      this.Buyer.mobileNumber=this.editform.value["mobilenumber"];
+      this.Buyer.mobileNumber=this.editform.value["mobileNumber"];
       this.Buyer.id=this.editform.value["id"];
       console.log(this.Buyer)
       this.service.Update(this.Buyer).subscribe(res=>
