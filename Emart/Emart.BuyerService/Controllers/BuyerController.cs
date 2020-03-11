@@ -191,6 +191,20 @@ namespace Emart.BuyerService.Controllers
                 return NotFound(ex.Message);
             }
         }
+        [HttpGet]
+        [Route("GetCount/{buyer_id}")]
+        public IActionResult GetCount(string buyerid)
+        {
+            try
+            {
+                return Ok(_repo.GetCount(buyerid));
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
     }
 
 }

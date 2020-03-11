@@ -19,6 +19,7 @@ export class SearchComponent implements OnInit {
   list:Items[];
   searchform:FormGroup;
   cart:Cart;
+  item:Items;
 
  
   constructor(private formbuilder:FormBuilder,private service:BuyerService,private route:Router) {
@@ -57,6 +58,13 @@ export class SearchComponent implements OnInit {
      console.log("Record added To Cart");
      alert('Item has been Added To Cart');
    })
+  }
+  BuyNow(item1:Items){
+    console.log(this.item);
+    this.item=item1,
+    localStorage.setItem('item1',JSON.stringify(this.item));
+    this.route.navigateByUrl('/buyer-landing-page/buy-product');
+
   }
 
   

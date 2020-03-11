@@ -14,6 +14,7 @@ export class ViewItemsComponent implements OnInit {
   item:Items;
   viewform:FormGroup;
   isShow:boolean=true;
+  image:string;
 
   constructor(private service:SellerService,private formBuilder:FormBuilder) { }
 
@@ -27,7 +28,8 @@ export class ViewItemsComponent implements OnInit {
       itemName:[''],
       itemDescription:[''],
       stockNumber:[''],
-      remarks:['']
+      remarks:[''],
+      image:['']
     });
     this.ViewItems();
   }
@@ -58,6 +60,7 @@ export class ViewItemsComponent implements OnInit {
     item.stockNumber=Number(this.viewform.value["stockNumber"]);
      item.itemDescription=this.viewform.value["itemDescription"];
     item.remarks=this.viewform.value["remarks"];
+    this.item.image=this.image;
 this.service.UpdateItems(item).subscribe(res=>{console.log('Record updated')})
     console.log(this.item);
    
@@ -94,6 +97,7 @@ this.service.UpdateItems(item).subscribe(res=>{console.log('Record updated')})
               categoryId:this.item.categoryId,
               subcategoryId:this.item.subCategoryId,
               remarks:this.item.remarks,
+              image:this.item.image
               
             }
           )
@@ -105,6 +109,9 @@ this.service.UpdateItems(item).subscribe(res=>{console.log('Record updated')})
       )
      
     }
+    fileEvent(event){
+      this.image = event.target.files[0].name;
+  }
    
  
 

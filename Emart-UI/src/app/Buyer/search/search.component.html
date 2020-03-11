@@ -7,7 +7,7 @@
           <h1>{{i.itemName}} </h1>
           <p class="price">{{i.price}}</p>
           <p>{{i.itemDescription}}</p>
-          <p><button  [routerLink]="['/buyer-landing-page/buy-product']">Buy Now</button></p>
+          <p><button  (click)="BuyNow(i)">Buy Now</button></p>
           <p><button (click)="AddtoCart(i)">Add to Cart</button></p>
         </div>
         </div>

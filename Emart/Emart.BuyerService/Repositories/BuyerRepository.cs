@@ -65,9 +65,19 @@ namespace Emart.BuyerService.Repositories
             return _context.Category.ToList();
         }
 
+        public int GetCount(string bid)
+        {
+            return _context.Cart.Where(i => i.Id == bid).ToList().Count;
+        }
+
         public Buyer GetProfile(string id)
         {
             return _context.Buyer.Find(id);
+        }
+
+        public PurchaseHistory GetPurchaseHistory(string id)
+        {
+            return _context.PurchaseHistory.Find(id);
         }
 
         public List<SubCategory> GetSubCategories(string cid)

@@ -51,4 +51,7 @@ export class SellerService {
   public DeleteItem(id:string):Observable<Items>{
     return this.http.delete<Items>(this.url+'Item/Deleteitem/'+id,Requestheaders);
   }
+  public GetReports(sellrid:string):Observable<any>{
+    return this.http.get<any>(this.url+'Seller/GetReports/'+sellrid,Requestheaders);
+  }
 }

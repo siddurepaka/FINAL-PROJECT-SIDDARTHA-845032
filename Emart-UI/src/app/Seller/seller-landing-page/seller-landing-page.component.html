@@ -2,10 +2,11 @@
 <div class="bg">
 <div class="topnav">
   
-    <a class="col-sm-2"[routerLink]="['/seller-landing-page/add-items']">Add Item</a>
-    <a class="col-sm-2"[routerLink]="['/seller-landing-page/view-items']">View Items</a>
-    <a class="col-sm-2"[routerLink]="['/seller-landing-page/view-seller-profile']">View/Edit profile</a>
-    <a class="col-sm-2"[routerLink]="['/seller-landing-page/view-reports']">View Reports</a>
+    <a class="col-sm-2"[routerLink]="['/seller-landing-page/add-items']"><span class="glyphicon glyphicon-tag mt-5"></span>Add Item</a>
+    <a class="col-sm-2"[routerLink]="['/seller-landing-page/view-items']"><span class="glyphicon glyphicon-screenshot mt-5"></span>View Items</a>
+    <a class="col-sm-2"[routerLink]="['/seller-landing-page/view-seller-profile']"><span class="glyphicon glyphicon-user mt-5"></span>profile</a>
+    <a class="col-sm-2"[routerLink]="['/seller-landing-page/view-reports']"><span class="glyphicon glyphicon-print mt-5"></span>View Reports</a>
+    <a id="l" ><i class="glyphicon glyphicon-off mt-5" (click)="Logout()" ></i>logout</a>
     
   </div>
   <router-outlet></router-outlet>

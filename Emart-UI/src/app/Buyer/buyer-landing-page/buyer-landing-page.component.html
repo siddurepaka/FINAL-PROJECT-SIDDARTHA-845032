@@ -8,7 +8,8 @@
    <a [routerLink]="['/buyer-landing-page/view-cart']"><span class="glyphicon glyphicon-shopping-cart mt-5"></span>View Cart</a>
   <a [routerLink]="['/buyer-landing-page/purchase-history']"><span class="glyphicon glyphicon-calendar mt-5"></span>PurchaseHistory</a>
   <a [routerLink]="['/buyer-landing-page/view-profile']"><span class="glyphicon glyphicon-eye-open mt-5"></span>view profile</a>
-   <a href="#" id="l" ><i class="glyphicon glyphicon-off mt-5" ></i>logout</a>
+   <a id="l" ><i class="glyphicon glyphicon-off mt-5" (click)="Logout()" ></i>logout</a>
+   <!-- <a id="l"><button (click)="Logout()">LOGOUT</button></a> -->
     
 
   <div class="search-container mt-5">

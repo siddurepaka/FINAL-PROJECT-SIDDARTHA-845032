@@ -52,6 +52,12 @@ export class BuyerService {
   {
     return this.http.delete<any>(this.url+'DeleteCartItem/'+itemid,Requestheaders);
   }
+  public GetPurchaseHistory(buyerid:string):Observable<any>{
+    return this.http.get<any>(this.url+'PurchaseHistory/'+buyerid,Requestheaders);
+  }
+  public GetCount(buyerid:string):Observable<any>{
+    return this.http.get<any>(this.url+'GetCount/'+buyerid,Requestheaders);
+  }
   
  
 

@@ -46,5 +46,19 @@ namespace Emat.SellerService.Controllers
                 return NotFound(ex.InnerException.Message);
             }
         }
+        [HttpGet]
+        [Route("GetReports/{id}")]
+        public IActionResult GetReports(string sellerid)
+        {
+            try
+            {
+                return Ok(_repo.GetReports(sellerid));
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
     }
 }

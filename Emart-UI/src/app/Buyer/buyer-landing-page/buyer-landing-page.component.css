@@ -80,6 +80,7 @@ body {
 #l
 {
     float: right;
+    cursor: pointer;
 }
 .pattern
 {

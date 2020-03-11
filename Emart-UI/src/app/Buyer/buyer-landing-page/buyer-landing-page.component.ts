@@ -74,7 +74,7 @@ export class BuyerLandingPageComponent implements OnInit {
   }
   Logout(){
     localStorage.clear();
-    this.route.navigateByUrl('/login')
+    this.route.navigateByUrl('/home/login');
   }
   AddtoCart(item2:Items){
     console.log(item2);

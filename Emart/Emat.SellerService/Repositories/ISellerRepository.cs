@@ -10,5 +10,6 @@ namespace Emat.SellerService.Repositories
     {
         void Editprofile(Seller obj);
         Seller Getprofile(string id);
+        List<PurchaseHistory> GetReports(string sellerid);
     }
 }

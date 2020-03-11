@@ -2,9 +2,11 @@
 <div class = "bg">
 <div class="topnav">
   
-    <a class="col-sm-4"[routerLink]="['/admin/add-category']">Add Category</a>
-    <a class="col-sm-4"[routerLink]="['/admin/add-sub-category']">Add Sub Category</a>
-    <a class="col-sm-4"[routerLink]="['']">Logout</a>
+    <a class="col-sm-4"[routerLink]="['/admin/add-category']"><span class="glyphicon glyphicon-barcode mt-5"></span>Add Category</a>
+    <a class="col-sm-4"[routerLink]="['/admin/add-sub-category']"><span class="glyphicon glyphicon-qrcode mt-5"></span>Add Sub Category</a>
+    <a class="col-sm-4" id="l" ><i class="glyphicon glyphicon-off mt-5" (click)="Logout()" ></i>Logout</a>
+
+
   </div>
   <router-outlet></router-outlet>
 </div>

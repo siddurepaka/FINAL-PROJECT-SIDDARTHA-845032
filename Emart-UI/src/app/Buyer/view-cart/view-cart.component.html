@@ -37,7 +37,7 @@
               <h1>{{cart.itemname}} </h1>
               <p class="price">{{cart.price}}</p>
               <p>{{cart.itemdescription}}</p>
-              <p><button [routerLink]="['/buyer-landing-page/buy-product']">Buy Now</button></p>
+              <p><button (click)="BuyNow(cart.id)">Buy Now</button></p>
               <p><button (click)="Remove(cart.cartid)">Remove Cart</button></p>
             </div>
             </div>
