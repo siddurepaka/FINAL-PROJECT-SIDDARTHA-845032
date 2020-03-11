@@ -2700,6 +2700,24 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Emat.SellerService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.Cors": "2.2.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.2",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.1"
+        },
+        "compile": {
+          "bin/placeholder/Emat.SellerService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Emat.SellerService.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -8733,6 +8751,11 @@
       "type": "project",
       "path": "../Emart.BuyerService/Emart.BuyerService.csproj",
       "msbuildProject": "../Emart.BuyerService/Emart.BuyerService.csproj"
+    },
+    "Emat.SellerService/1.0.0": {
+      "type": "project",
+      "path": "../Emat.SellerService/Emat.SellerService.csproj",
+      "msbuildProject": "../Emat.SellerService/Emat.SellerService.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8740,6 +8763,7 @@
       "Emar.AccountService >= 1.0.0",
       "Emart.AdminServices >= 1.0.0",
       "Emart.BuyerService >= 1.0.0",
+      "Emat.SellerService >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.2",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.2",
       "Microsoft.NET.Test.Sdk >= 16.2.0",
@@ -8781,6 +8805,9 @@
             },
             "D:\\FINAL-PROJECT-SIDDARTHA-845032\\Emart\\Emart.BuyerService\\Emart.BuyerService.csproj": {
               "projectPath": "D:\\FINAL-PROJECT-SIDDARTHA-845032\\Emart\\Emart.BuyerService\\Emart.BuyerService.csproj"
+            },
+            "D:\\FINAL-PROJECT-SIDDARTHA-845032\\Emart\\Emat.SellerService\\Emat.SellerService.csproj": {
+              "projectPath": "D:\\FINAL-PROJECT-SIDDARTHA-845032\\Emart\\Emat.SellerService\\Emat.SellerService.csproj"
             }
           }
         }

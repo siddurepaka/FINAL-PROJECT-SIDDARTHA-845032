@@ -25,7 +25,7 @@ export class BuyProductComponent implements OnInit {
       cvv:[''],
       ed:[''],
       name:[''],
-      date:[''],
+      // date:[''],
       numberofitems:[''],
       remarks:['']
 
@@ -44,7 +44,7 @@ export class BuyProductComponent implements OnInit {
     this.obj.numberofitems=this.buyform.value["numberofitems"];
     this.obj.Itemid=this.item.id;
     this.obj.Transactiontype=this.buyform.value["transactiontype"];
-    this.obj.Datetime=this.buyform.value["date"];
+    // this.obj.Datetime=this.buyform.value["date"];
     this.obj.remarks=this.buyform.value["remarks"];
     console.log(this.obj);
     this.service.BuyItem(this.obj).subscribe(res=>{

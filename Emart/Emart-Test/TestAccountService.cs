@@ -35,11 +35,11 @@ namespace Emart_Test
         {
             _repo.Buyerregister(new Buyer()
             {
-                Id = "5309",
-                Username = "devudu",
-                Password = "devudu1234$",
-                Emailid = "devdu@vaikuntam",
-                MobileNumber = "9848022338",
+                Id = "4309",
+                Username = "devud6u",
+                Password = "devudu12364$",
+                Emailid = "devdu1@vaikuntam",
+                MobileNumber = "9848042338",
                 Createdatetime = DateTime.Now,
 
             });
@@ -51,18 +51,18 @@ namespace Emart_Test
         {
             _repo.Sellerregister(new Seller()
             {
-                Id = "4309",
-                Username = "Mousey1",
-                Password = "Mou8925$$",
-                Emailid = "mos@mail.com",
-                ContactNumber = "9533444875",
-                CompanyName = "Alphatech",
-                Gstin = "k684",
-                BriefAboutCompany = "Luggage Manufacturers",
-                PostalAddress = "karampakam",
-                Website = "www.so.com",
+                Id = "4709",
+                Username = "Mous76",
+                Password = "Mou89@",
+                Emailid = "mo1@mail.com",
+                ContactNumber = "9533666775",
+                CompanyName = "Alpha6tech",
+                Gstin = "k85746",
+                BriefAboutCompany = "LuggageManufacturers",
+                PostalAddress = "karampaka",
+                Website = "www.so1.com",
             });
-            var res = _repo.Sellerlogin("Mousey1", "Mou8925$$");
+            var res = _repo.Sellerlogin("Mous76", "Mou89@");
             Assert.IsNotNull(res);
         }
        

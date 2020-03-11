@@ -35,7 +35,7 @@
   color: white;
 }
 .bg{
-    background-image: url('D:\FINAL-PROJECT-SIDDARTHA-845032\Emart-UI\src\assets\images\Adminbg.jpg');
+  background-image: url("src/assets/images/Adminbg.jpg ");
     background-size:100% 100%;
     background-repeat: no-repeat;
     height:1200px;;

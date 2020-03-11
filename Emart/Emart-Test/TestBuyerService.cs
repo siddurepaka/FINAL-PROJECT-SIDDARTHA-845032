@@ -22,7 +22,7 @@ namespace Emart_Test
         {
             _repo.BuyItem(new PurchaseHistory()
             {
-                Id = "TR123",
+                Id = "TR134",
                 BuyerId = "1122",
                 SellerId = "EMARTSEL31",
                 ItemId = "I126",
@@ -86,6 +86,15 @@ namespace Emart_Test
             var result = _repo.GetCartItems("CAR65");
             Assert.IsNotNull(result);
         }
+           [Test]
+        [Description("to test delete cart items")]
+        public void TestTodelete()
+        {
+            _repo.DeleteCartItem("EMCR80");
+            var result = _repo.Getcart("EMRC80");
+            Assert.Null(result);
+        }
+
     }
      
 }

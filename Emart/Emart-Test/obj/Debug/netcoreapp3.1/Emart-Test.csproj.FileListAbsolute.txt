@@ -213,3 +213,6 @@ D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emart-Test\bin\Debug\netcoreapp3.1\Emart
 D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emart-Test\bin\Debug\netcoreapp3.1\Emart.BuyerService.exe
 D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emart-Test\bin\Debug\netcoreapp3.1\Emart.BuyerService.dll
 D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emart-Test\bin\Debug\netcoreapp3.1\Emart.BuyerService.pdb
+D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emart-Test\bin\Debug\netcoreapp3.1\Emat.SellerService.exe
+D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emart-Test\bin\Debug\netcoreapp3.1\Emat.SellerService.dll
+D:\FINAL-PROJECT-SIDDARTHA-845032\Emart\Emart-Test\bin\Debug\netcoreapp3.1\Emat.SellerService.pdb

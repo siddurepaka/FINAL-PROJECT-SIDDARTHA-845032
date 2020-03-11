@@ -21,6 +21,7 @@ namespace Emart.BuyerService.Repositories
         List<Cart> GetCartItems(string bid);
         void DeleteCartItem(string cartid);
         List<Category> GetCategories();
+        Cart Getcart(string cartid);
     }
 
 }
