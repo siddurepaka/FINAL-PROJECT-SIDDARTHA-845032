@@ -20,7 +20,7 @@ namespace Emart_Test
         [Test]
         public void TestBuyerLogin()
         {
-            var result= _repo.Buyerlogin("siddu", "1234");
+            var result= _repo.Buyerlogin("siddu", "12345");
             Assert.IsNotNull(result);
 
         }
@@ -35,15 +35,15 @@ namespace Emart_Test
         {
             _repo.Buyerregister(new Buyer()
             {
-                Id = "4309",
-                Username = "devud6u",
-                Password = "devudu12364$",
-                Emailid = "devdu1@vaikuntam",
-                MobileNumber = "9848042338",
+                Id = "7309",
+                Username = "devud0",
+                Password = "devudu2364$",
+                Emailid = "devdu7@vaikuntam",
+                MobileNumber = "9848052338",
                 Createdatetime = DateTime.Now,
 
             });
-            var res = _repo.Buyerlogin("devudu", "devudu1234$");
+            var res = _repo.Buyerlogin("devud0", "devudu2364$");
             Assert.IsNotNull(res);
         }
         [Test]
@@ -51,18 +51,18 @@ namespace Emart_Test
         {
             _repo.Sellerregister(new Seller()
             {
-                Id = "4709",
-                Username = "Mous76",
-                Password = "Mou89@",
-                Emailid = "mo1@mail.com",
-                ContactNumber = "9533666775",
-                CompanyName = "Alpha6tech",
-                Gstin = "k85746",
+                Id = "4209",
+                Username = "Mous26",
+                Password = "Mou82@",
+                Emailid = "mo2@mail.com",
+                ContactNumber = "9533666725",
+                CompanyName = "Alpha2tech",
+                Gstin = "k85726",
                 BriefAboutCompany = "LuggageManufacturers",
                 PostalAddress = "karampaka",
-                Website = "www.so1.com",
+                Website = "www.so2.com",
             });
-            var res = _repo.Sellerlogin("Mous76", "Mou89@");
+            var res = _repo.Sellerlogin("Mous26", "Mou82@");
             Assert.IsNotNull(res);
         }
        

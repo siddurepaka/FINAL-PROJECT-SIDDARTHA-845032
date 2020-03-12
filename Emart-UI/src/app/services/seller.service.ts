@@ -38,6 +38,7 @@ export class SellerService {
   }
   public UpdateItems(items:Items):Observable<any>
   {
+    console.log(JSON.stringify(items));
     return this.http.put<any>(this.url+'Item/Updateitems',JSON.stringify(items),Requestheaders);
   }
   public GetCategories():Observable<any>

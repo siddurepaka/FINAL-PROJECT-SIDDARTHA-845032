@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import{SellerService}from 'src/app/services/seller.service';
 import{Items}from'src/app/model/items';
+import{Seller}from 'src/app/model/seller'
 
 
 @Component({
@@ -15,8 +16,21 @@ export class ViewItemsComponent implements OnInit {
   viewform:FormGroup;
   isShow:boolean=true;
   image:string;
+  submitted=false;
 
-  constructor(private service:SellerService,private formBuilder:FormBuilder) { }
+  constructor(private service:SellerService,private formBuilder:FormBuilder) { 
+    let seller=localStorage.getItem('seller')
+    this.service.ViewItems(seller).subscribe(res=>
+      {
+        this.list=res;
+        console.log(this.list);
+      },
+      err=>{
+        console.log(err);
+      });
+ 
+  }
+  
 
   ngOnInit() {
     this.viewform=this.formBuilder.group({
@@ -29,9 +43,9 @@ export class ViewItemsComponent implements OnInit {
       itemDescription:[''],
       stockNumber:[''],
       remarks:[''],
-      image:['']
+      image:[''],
     });
-    this.ViewItems();
+  
   }
   ViewItems()
   { 
@@ -48,7 +62,7 @@ export class ViewItemsComponent implements OnInit {
   Update()
   {
     let item=new Items();
-    console.log(item);
+    //console.log(item);
     
     item.id=this.viewform.value["id"];
     item.categoryId=this.viewform.value["categoryId"];
@@ -60,6 +74,7 @@ export class ViewItemsComponent implements OnInit {
     item.stockNumber=Number(this.viewform.value["stockNumber"]);
      item.itemDescription=this.viewform.value["itemDescription"];
     item.remarks=this.viewform.value["remarks"];
+    // this.item.image=this.viewform.value["image"];
     this.item.image=this.image;
 this.service.UpdateItems(item).subscribe(res=>{console.log('Record updated')})
     console.log(this.item);
@@ -111,7 +126,10 @@ this.service.UpdateItems(item).subscribe(res=>{console.log('Record updated')})
     }
     fileEvent(event){
       this.image = event.target.files[0].name;
+      console.log(this.image);
   }
+  get f() { return this.viewform.controls; }
+
    
  
 

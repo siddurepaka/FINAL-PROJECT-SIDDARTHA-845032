@@ -29,6 +29,8 @@ export class BuyerLandingPageComponent implements OnInit {
 
 
   constructor(private formbuilder:FormBuilder,private service:BuyerService,private route:Router) {
+    if(localStorage.getItem('token')){
+
     this.service.GetCategories().subscribe(res=>{
       this.clist=res;
       console.log(this.clist);
@@ -38,6 +40,11 @@ export class BuyerLandingPageComponent implements OnInit {
       console.log(this.list);
       
     })
+  }
+  else{
+    alert('please login With your Credentials');
+    this.route.navigateByUrl('/home/login');
+  }
   }
     
  

@@ -128,8 +128,16 @@
       <div class="form-group">
         <label class="control-label col-sm-2">Image:</label>
        <input type="file" formControlName="image" (change)="fileEvent($event)"class="form-control">
-      </div>              
+       <br><br>
+       
+           <div>
+               <img src='assets/images/{{item.image}}' style="height: 150px; width:150px;"><br>
+               
+           </div>
+       </div> 
+
       
+       
       
       <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal" (click)="Update()">Save</button>

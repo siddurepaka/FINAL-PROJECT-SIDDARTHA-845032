@@ -22,7 +22,7 @@ namespace Emart_Test
         {
             _repo.BuyItem(new PurchaseHistory()
             {
-                Id = "TR134",
+                Id = "TR167",
                 BuyerId = "1122",
                 SellerId = "EMARTSEL31",
                 ItemId = "I126",
@@ -90,8 +90,8 @@ namespace Emart_Test
         [Description("to test delete cart items")]
         public void TestTodelete()
         {
-            _repo.DeleteCartItem("EMCR80");
-            var result = _repo.Getcart("EMRC80");
+            _repo.DeleteCartItem("EMCR46");
+            var result = _repo.Getcart("EMCR46");
             Assert.Null(result);
         }
 

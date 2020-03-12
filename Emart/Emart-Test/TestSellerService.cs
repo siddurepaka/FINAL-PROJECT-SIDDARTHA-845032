@@ -20,17 +20,17 @@ namespace Emart_Test
         [Description("Test EditProfile()")]
         public void TestEditProfile()
         {
-            Seller seller = _repo.Getprofile("S001");
-            seller.PostalAddress = "600096";
+            Seller seller = _repo.Getprofile("EMARTSEL31");
+            seller.PostalAddress = "55467";
             _repo.Editprofile(seller);
-            Seller seller1 = _repo.Getprofile("S001");
+            Seller seller1 = _repo.Getprofile("EMARTSEL31");
             Assert.AreSame(seller, seller1);
         }
         [Test]
         [Description("Test GetProfile()")]
         public void TestGetProfile()
         {
-            var result = _repo.Getprofile("S001");
+            var result = _repo.Getprofile("EMARTSEL31");
             Assert.IsNotNull(result);
         }
     }

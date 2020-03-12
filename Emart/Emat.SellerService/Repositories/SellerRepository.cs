@@ -27,7 +27,7 @@ namespace Emat.SellerService.Repositories
 
         public List<PurchaseHistory> GetReports(string sellerid)
         {
-            return _context.PurchaseHistory.Where(e => e.Id == sellerid).ToList();
+            return _context.PurchaseHistory.Where(e => e.SellerId == sellerid).ToList();
 
         }
     }

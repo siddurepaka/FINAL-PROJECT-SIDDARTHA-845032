@@ -16,6 +16,7 @@ export class ViewReportsComponent implements OnInit {
     if(localStorage.getItem('seller')){
 
       let sid=localStorage.getItem('seller');
+      console.log(sid);
       this.service.GetReports(sid).subscribe(res=>{
         this.plist=res;
         console.log(this.plist);

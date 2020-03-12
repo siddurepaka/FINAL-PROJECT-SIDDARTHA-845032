@@ -23,11 +23,11 @@ namespace Emart_Test
             {
                 _repo.AddCategory(new Category()
                 {
-                    CategoryId = "CAT607",
+                    CategoryId = "CAT677",
                     CategoryName = "Kanchi Pattu",
                     BriefDetails = "Gold and silver jery",
                 });
-                var result = _repo.GetCategorybyid("CAT607");
+                var result = _repo.GetCategorybyid("CAT677");
                 Assert.IsNotNull(result);
             }
             [Test]
@@ -35,14 +35,14 @@ namespace Emart_Test
             {
                 _repo.AddSubCategory(new SubCategory()
                 {
-                    SubCategoryId = "SUB607",
-                    SubCategoryName = "Broad border",
+                    SubCategoryId = "SUB677",
+                    SubCategoryName = "pattu Broad border",
                     BriefDetails = "Gold and Silver jery",
-                    CategoryId = "CAT607",
-                    Gst="k7845998"
+                    CategoryId = "CAT677",
+                    Gst="k7845978"
 
                 });
-                var res = _repo.GetSubCategorybyid("SUB687");
+                var res = _repo.GetSubCategorybyid("SUB677");
                 Assert.IsNotNull(res);
             }
 

@@ -7,7 +7,7 @@ sellerid:string;
 itemName:string;
 itemDescription:string;
 stockNumber:number;
-remarks:string;
 image:string;
+remarks:string;
 
 }

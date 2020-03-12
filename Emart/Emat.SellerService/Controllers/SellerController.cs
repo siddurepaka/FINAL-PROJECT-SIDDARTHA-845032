@@ -47,7 +47,7 @@ namespace Emat.SellerService.Controllers
             }
         }
         [HttpGet]
-        [Route("GetReports/{id}")]
+        [Route("GetReports/{Sellerid}")]
         public IActionResult GetReports(string sellerid)
         {
             try

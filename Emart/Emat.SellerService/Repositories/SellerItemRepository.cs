@@ -46,7 +46,9 @@ namespace Emat.SellerService.Repositories
         }
 
         public void UpdateItem(Items obj)
+
         {
+            
             _context.Items.Update(obj);
             _context.SaveChanges();
         }

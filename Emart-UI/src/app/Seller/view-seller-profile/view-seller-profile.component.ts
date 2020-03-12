@@ -26,7 +26,7 @@ export class ViewSellerProfileComponent implements OnInit {
      ContactNumber:[''],
 companyName:[''],
 Gstin:[''],
-BriefAboutCompany:[''],
+//BriefAboutCompany:[''],
 postalAddress:[''],
 website:['']
 
@@ -52,7 +52,7 @@ website:['']
 ContactNumber:this.seller.contactNumber,
 companyName:this.seller.companyName,
 Gstin:this.seller.gstin,
-BriefAboutCompany:this.seller.briefAboutCompany,
+//BriefAboutCompany:this.seller.briefAboutCompany,
 postalAddress:this.seller.postalAddress,
 website:this.seller.website
 
@@ -70,7 +70,7 @@ website:this.seller.website
     this.seller.emailid=this.sviewform.value['emailid'],
     this.seller.gstin=this.sviewform.value['Gstin'],
     this.seller.contactNumber=this.sviewform.value['ContactNumber'],
-    this.seller.briefAboutCompany=this.sviewform.value['BreifAboutCompany'],
+    //this.seller.briefAboutCompany=this.sviewform.value['BreifAboutCompany'],
     this.seller.postalAddress=this.sviewform.value['postalAddress'],
     this.seller.website=this.sviewform.value['website']
     console.log(this.seller);
