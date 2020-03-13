@@ -22,10 +22,10 @@ namespace Emart_Test
         {
             _repo.BuyItem(new PurchaseHistory()
             {
-                Id = "TR167",
+                Id = "TR124",
                 BuyerId = "1122",
                 SellerId = "EMARTSEL31",
-                ItemId = "I126",
+                ItemId = "I154",
                 TransactionType = "Card",
                 DateTime = DateTime.Now,
                 Remarks = "none",
@@ -33,7 +33,7 @@ namespace Emart_Test
 
 
             });
-            var res = _repo.SearchItemByName("Blue Lahenga");
+            var res = _repo.SearchItemByName("Golden jery saree");
             Assert.IsNotNull(res);
         }
         [Test]
@@ -90,8 +90,8 @@ namespace Emart_Test
         [Description("to test delete cart items")]
         public void TestTodelete()
         {
-            _repo.DeleteCartItem("EMCR46");
-            var result = _repo.Getcart("EMCR46");
+            _repo.DeleteCartItem("EMCR16");
+            var result = _repo.Getcart("EMCR16");
             Assert.Null(result);
         }
 
