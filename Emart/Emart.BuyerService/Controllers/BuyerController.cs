@@ -116,6 +116,7 @@ namespace Emart.BuyerService.Controllers
         public IActionResult GetCategories()
         {
             try
+
             {
                 return Ok(_repo.GetCategories());
             }
